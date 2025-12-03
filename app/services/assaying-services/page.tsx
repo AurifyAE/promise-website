@@ -22,6 +22,17 @@ const faqData: FAQItem[] = [
     
   ];
 
+const assayingCapabilities = [
+  "Instrumental analysis: fire assay, ICP-OES/ICP-MS and gravimetric methods as appropriate.",
+  "Chain of custody & certification: documented sample handling and certified assay reports for transactions and compliance.",
+  "Custom testing: alloys, karat verification, trace element analysis and sample preparation for refining.",
+  "Quality assurance: internal controls, calibration and traceable standards."
+]
+
+const benefits = [
+  "Jewelers, refiners, miners, bullion traders, banks and regulators requiring defensible purity data."
+]
+
 export default function AssayingServices() {
   return (
     <div className="min-h-screen bg-white">
@@ -37,10 +48,16 @@ export default function AssayingServices() {
               Certified Assaying Services
               </h2>
               <p className="text-gray-700 leading-relaxed mb-6 text-sm md:text-base">
-                Promise Gold Refinery is a state-of-the-art precious metals refinery based in Sharjah, UAE, established in 2024. We specialize in gold, silver, and other precious metal refining, utilizing the latest technology to deliver precise, efficient, and sustainable results for clients around the world.
+              Accurate, Traceable Results
+              Reliable assaying is the foundation of fair value and traceability in the precious metals market. Promise Gold Refinery provides precise assaying services using modern instrumentation and validated methods to measure gold, silver and other precious metals.
               </p>
               <p className="text-gray-700 leading-relaxed text-sm md:text-base">
-                At Promise Gold Refinery, we take pride in our responsible sourcing practices, strictly adhering to OECD Due Diligence Guidelines and international standards for ethical precious metal refining. Our processes ensure transparency, traceability, and integrity from start to finish.
+              <span className="font-semibold">Our assaying capabilities:</span>
+              <ul className="list-disc list-outside text-gray-700 leading-relaxed text-sm md:text-base px-6">
+                {assayingCapabilities.map((item, index) => (
+                  <li key={index}>{item}</li>
+                ))}
+              </ul>
               </p>
             </div>
 
@@ -86,11 +103,13 @@ export default function AssayingServices() {
               WHO BENEFITS
               </h2>
               <p className="text-gray-700 leading-relaxed mb-8 text-sm md:text-base">
-              Promise Gold Refinery delivers <span className="font-bold text-lg"> customised precious-metal refining  solutions</span> for a wide spectrum of clients - from artisanal and small-scale miners to major mining groups, jewelers, industrial manufacturers, financial institutions, and government entities. Each refining project is designed around the client’s specific needs, ensuring maximum recovery, exceptional purity, and full compliance with international quality benchmarks.
+                <ul className="list-disc list-outside text-gray-700 leading-relaxed text-sm md:text-base px-6">
+                  {benefits.map((item, index) => (
+                    <li key={index}>{item}</li>
+                  ))}
+                </ul>
               </p>
-              <p className="text-gray-700 leading-relaxed mb-8 text-sm md:text-base">
-                Backed by advanced technology and a customer-first approach, we continue to enhance client experience while reinforcing Dubai and Sharjah’s reputation as world-class centers for gold refining, metal recovery, and precious-metals trade.
-              </p>
+              
               <div className="flex flex-col sm:flex-row gap-4">
                 <button className="bg-[#294734] hover:bg-[#1e3326] text-white py-3 px-8 rounded-4xl transition-colors font-semibold duration-300 flex items-center justify-center gap-2">
                   ENQUIRE NOW <ArrowRight className="w-4 h-4" />

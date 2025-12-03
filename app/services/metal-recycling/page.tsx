@@ -21,6 +21,17 @@ const faqData: FAQItem[] = [
     
   ];
 
+  const keyFeatures = [
+    "Advanced recovery techniques: chemical refining, electro-chemical recovery and smelting optimised for different feedstocks.",
+    "E-waste & industrial scrap: safe handling and specialised processing for PCBs, connectors, catalysts and residues.",
+    "Sustainability benefits: reduces need for primary mining, lowers environmental footprint and supports circular supply chains.",
+    "Regulatory compliance: secure waste handling, hazardous materials controls and accurate material reporting."
+  ]
+
+  const benefits = [
+    "Electronics recyclers, manufacturers, jewelers, industrial clients and sustainability-focused investors."
+  ]
+
 
 export default function MetalRecycling() {
   return (
@@ -37,10 +48,15 @@ export default function MetalRecycling() {
                 Sustainable Metal Recycling in UAE
               </h2>
               <p className="text-gray-700 leading-relaxed mb-6 text-sm md:text-base">
-                Promise Gold Refinery is a state-of-the-art precious metals refinery based in Sharjah, UAE, established in 2024. We specialize in gold, silver, and other precious metal refining, utilizing the latest technology to deliver precise, efficient, and sustainable results for clients around the world.
+                Promise Gold Refinery's metal recycling service extracts valuable precious metals (gold, silver, platinum, palladium) from end-of-life products, jewellery scrap and electronic waste. Our recycling process prioritises high recovery, environmental compliance and responsible downstream management.
               </p>
               <p className="text-gray-700 leading-relaxed text-sm md:text-base">
-                At Promise Gold Refinery, we take pride in our responsible sourcing practices, strictly adhering to OECD Due Diligence Guidelines and international standards for ethical precious metal refining. Our processes ensure transparency, traceability, and integrity from start to finish.
+              <span className="font-semibold">Key Features:</span>
+              <ul className="list-disc list-outside text-gray-700 leading-relaxed text-sm md:text-base px-6">
+                {keyFeatures.map((item, index) => (
+                  <li key={index}>{item}</li>
+                ))}
+              </ul>
               </p>
             </div>
 
@@ -86,11 +102,13 @@ export default function MetalRecycling() {
                 WHO BENEFITS
               </h2>
               <p className="text-gray-700 leading-relaxed mb-8 text-sm md:text-base">
-              Promise Gold Refinery delivers <span className="font-bold text-lg"> customised precious-metal refining  solutions</span> for a wide spectrum of clients - from artisanal and small-scale miners to major mining groups, jewelers, industrial manufacturers, financial institutions, and government entities. Each refining project is designed around the client’s specific needs, ensuring maximum recovery, exceptional purity, and full compliance with international quality benchmarks.
+                <ul className="list-disc list-outside text-gray-700 leading-relaxed text-sm md:text-base px-6">
+                  {benefits.map((item, index) => (
+                    <li key={index}>{item}</li>
+                  ))}
+                </ul>
               </p>
-              <p className="text-gray-700 leading-relaxed mb-8 text-sm md:text-base">
-                Backed by advanced technology and a customer-first approach, we continue to enhance client experience while reinforcing Dubai and Sharjah’s reputation as world-class centers for gold refining, metal recovery, and precious-metals trade.
-              </p>
+              
               <div className="flex flex-col sm:flex-row gap-4">
                 <button className="bg-[#294734] hover:bg-[#1e3326] text-white py-3 px-8 rounded-4xl transition-colors font-semibold duration-300 flex items-center justify-center gap-2">
                   ENQUIRE NOW <ArrowRight className="w-4 h-4" />

@@ -5,25 +5,20 @@ import { useState, useEffect, useCallback, useRef } from 'react';
 
 const testimonials = [
   {
-    quote: "Promise Gold Refinery has been an exceptional partner for our mining operations. Their refining accuracy, transparent reporting, and timely settlements make them one of the most reliable refineries we've worked with.",
-    name: "Ahmed Al Mansoori",
+    quote: "Promise Gold Refinery has been an exceptional partner for our mining operations. Their refining accuracy, transparent reporting, and timely settlements make them one of the most reliable refineries we’ve worked with. We appreciate their commitment to responsible sourcing and look forward to a long-term partnership",
+    name: "Ahmed Al Mansoori,",
     position: "Director, Al Noor Mining Co."
   },
   {
-    quote: "The team at Promise Gold delivered exceptional service with precise assaying and transparent reporting. Their commitment to quality and ethical practices is truly commendable.",
-    name: "Fatima Al Hashimi",
-    position: "CEO, Golden Sands Trading"
+    quote: "We rely on Promise Gold Refinery for all our gold and silver refining needs. The purity of their refined metals consistently meets our high jewelry production standards. Their professionalism, quick turnaround, and integrity make them a trusted part of our supply chain.",
+    name: "Sofia Karim,",
+    position: "Founder, Golden Aura Jewels"
   },
   {
-    quote: "As a jewelry manufacturer, we rely on consistent quality. Promise Gold consistently delivers high-purity gold with detailed certification, making them our trusted refining partner.",
-    name: "Khalid Al Maktoum",
-    position: "Owner, Royal Jewelers"
+    quote: "What truly sets Promise Gold Refinery apart is their dedication to ethical and sustainable refining. Their adherence to OECD guidelines and transparent sourcing practices give us full confidence in every transaction",
+    name: "Laila Hussein,",
+    position: "Sustainability Officer, Green Earth Minerals"
   },
-  {
-    quote: "Their customer service is outstanding. They're always available to answer questions and provide guidance on the best refining solutions for our needs.",
-    name: "Yousef Al Farsi",
-    position: "Procurement Manager, Al Noor Gold"
-  }
 ];
 
 const clampValue = (value: number, min: number, max: number) =>
@@ -105,7 +100,7 @@ export default function Testimonials() {
     <section className="py-20 bg-white">
       <div className="container mx-auto px-4">
         <h2 className="text-4xl text-black font-bold text-center mb-16">
-          What Our Clients Say
+          Trusted by Industry Leaders
         </h2>
 
         <div className="max-w-6xl mx-auto">

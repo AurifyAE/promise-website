@@ -21,6 +21,20 @@ const faqData: FAQItem[] = [
   },
 ];
 
+const whatWeDo = [
+  "Comprehensive processing: melting, chemical refining, electro-refining (where applicable) and final purification.",
+  "Accurate assaying: in-house assays verify purity at every critical step.",
+  "Flexible product options: deliverable as cast bars, granules or specified fineness (e.g., 999.9, 999).",
+  "Secure handling & documentation: chain-of-custody records, certificates of analysis, and OECD due diligence documentation."
+]
+
+const benefits = [
+  "Advanced refining equipment and experienced metallurgists.",
+  "Competitive recovery rates and transparent fee structures.",
+  "Compliance with OECD responsible sourcing guidelines and international standards.",
+  "Solutions for jewelers, miners, banks, industrial buyers and investors."
+]
+
 export default function GoldRefining() {
   return (
     <div className="min-h-screen bg-white">
@@ -36,10 +50,15 @@ export default function GoldRefining() {
                 Gold Refining Services
               </h2>
               <p className="text-gray-700 leading-relaxed mb-6 text-sm md:text-base">
-                Promise Gold Refinery is a state-of-the-art precious metals refinery based in Sharjah, UAE, established in 2024. We specialize in gold, silver, and other precious metal refining, utilizing the latest technology to deliver precise, efficient, and sustainable results for clients around the world.
+                Delivers professional gold refining services in Sharjah using industry-leading technology and proven chemical and metallurgical processes. Whether you bring ore, scrap, jewellery or bullion, our end-to-end refining workflow ensures maximum recovery and market-grade purity.
               </p>
               <p className="text-gray-700 leading-relaxed text-sm md:text-base">
-                At Promise Gold Refinery, we take pride in our responsible sourcing practices, strictly adhering to OECD Due Diligence Guidelines and international standards for ethical precious metal refining. Our processes ensure transparency, traceability, and integrity from start to finish.
+                <span className="font-semibold">What we do:</span>
+                <ul className="list-disc list-outside text-gray-700 leading-relaxed text-sm md:text-base px-6">
+                  {whatWeDo.map((item, index) => (
+                    <li key={index}>{item}</li>
+                  ))}
+                </ul>
               </p>
             </div>
 
@@ -85,13 +104,11 @@ export default function GoldRefining() {
                 WHO BENEFITS
               </h2>
               <p className="text-gray-700 leading-relaxed mb-8 text-sm md:text-base">
-                Advanced refining equipment and experienced metallurgists.
-                Competitive recovery rates and transparent fee structures.
-                Compliance with OECD responsible sourcing guidelines and international standards.
-                Solutions for jewelers, miners, banks, industrial buyers and investors.
-              </p>
-              <p className="text-gray-700 leading-relaxed mb-8 text-sm md:text-base">
-                Backed by advanced technology and a customer-first approach, we continue to enhance client experience while reinforcing Dubai and Sharjah’s reputation as world-class centers for gold refining, metal recovery, and precious-metals trade.
+                <ul className="list-disc list-outside text-gray-700 leading-relaxed text-sm md:text-base px-6">
+                  {benefits.map((item, index) => (
+                    <li key={index}>{item}</li>
+                  ))}
+                </ul>
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <button className="bg-[#294734] hover:bg-[#1e3326] text-white py-3 px-8 rounded-4xl transition-colors font-semibold duration-300 flex items-center justify-center gap-2">

@@ -70,10 +70,10 @@ export default function AboutPage() {
                 Customised Precious-Metal Refining Solutions
               </h2> */}
               <p className="text-gray-700 leading-relaxed mb-8 text-sm md:text-base">
-              Promise Gold Refinery delivers <span className="font-bold text-lg"> customised precious-metal refining  solutions</span> for a wide spectrum of clients - from artisanal and small-scale miners to major mining groups, jewelers, industrial manufacturers, financial institutions, and government entities. Each refining project is designed around the client’s specific needs, ensuring maximum recovery, exceptional purity, and full compliance with international quality benchmarks.
+              Promise Gold Refinery delivers <span className="font-bold text-lg"> customised precious-metal refining  solutions</span> for a wide spectrum of clients - from artisanal and small-scale miners to major mining groups, jewelers, industrial manufacturers, financial institutions, and government entities. Each refining project is designed around the client's specific needs, ensuring maximum recovery, exceptional purity, and full compliance with international quality benchmarks.
               </p>
               <p className="text-gray-700 leading-relaxed mb-8 text-sm md:text-base">
-                Backed by advanced technology and a customer-first approach, we continue to enhance client experience while reinforcing Dubai and Sharjah’s reputation as world-class centers for gold refining, metal recovery, and precious-metals trade.
+                Backed by advanced technology and a customer-first approach, we continue to enhance client experience while reinforcing Dubai and Sharjah's reputation as world-class centers for gold refining, metal recovery, and precious-metals trade.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <button className="bg-[#294734] hover:bg-[#1e3326] text-white py-3 px-8 rounded-lg transition-colors duration-300 font-semibold flex items-center justify-center gap-2">

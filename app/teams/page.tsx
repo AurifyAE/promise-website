@@ -45,7 +45,7 @@ export default function TeamsPage() {
             </h2>
             
             <p className="text-gray-700 leading-relaxed mb-12 max-w-4xl mx-auto text-center md:text-left">
-              At Promise Gold Refinery, our team embodies the pinnacle of expertise and dedication in the precious metals industry. From our skilled technicians meticulously handling each step of the refining process to our astute analysts ensuring the highest standards of quality control, every member of our team is committed to delivering unparalleled results.
+              At Promise Gold Refinery, our team embodies the pinnacle of expertise and dedication in the precious metals industry. From our skilled technicians meticulously handling each step of the refining process to our astute analysts ensuring the highest standards of quality control, every member of our team is committed to delivering unparalleled results
             </p>
 
             {/* Scrollable Team Cards */}

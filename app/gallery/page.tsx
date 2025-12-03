@@ -50,9 +50,7 @@ export default function GalleryPage() {
               Welcome to Our Gallery
             </h2>
             <p className="text-gray-700 leading-relaxed max-w-3xl mx-auto text-sm md:text-base">
-              Explore a curated collection of moments, creations, and experiences that define our brand. 
-              Each image reflects our commitment to quality, craftsmanship, and excellence. Discover 
-              through our gallery and discover the story behind what we do.
+              Explore a curated collection of moments, creations, and experiences that define our brand. Each image reflects our commitment to quality, craftsmanship, and excellence. Browse through and discover the story behind what we do.
             </p>
           </div>
 
