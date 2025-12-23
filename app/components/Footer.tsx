@@ -2,6 +2,25 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { ArrowRight } from 'lucide-react';
 
+const quickLinks = [
+  { label: "About Us", href: "/about-us" },
+  { label: "Products", href: "/products" },
+  { label: "Policices & Certifications", href: "/certificate-and-policies" },
+  { label: "Gallery", href: "/gallery" },
+  { label: "Contact Us", href: "/contact-us" },
+  { label: "News", href: "/news" },
+  { label: "Blogs", href: "/blogs" },
+  { label: "FAQ", href: "/faq" },
+];
+
+const services = [
+  { label: "Gold Refining", href: "/services/gold-refining" },
+  { label: "Assaying Services", href: "/services/assaying-services" },
+  { label: "Metal Recycling", href: "/services/metal-recycling" },
+  { label: "Silver Refining", href: "/services/silver-refining" },
+];
+
+
 export default function Footer() {
   return (
     <footer className="bg-[#294734] text-white">
@@ -48,12 +67,12 @@ export default function Footer() {
 
           {/* 2nd Column - Quick Links */}
           <div>
-            <h3 className="mb-6 text-lg font-semibold">Quick Links</h3>
-            <ul className="space-y-3">
-              {['About Us', 'Products', 'Services', 'Accreditations', 'Gallery', 'Contact Us'].map((item) => (
-                <li key={item}>
-                  <Link href={`/${item.toLowerCase().replace(/\s+/g, '-')}`} className="text-white hover:text-[#EBDECF] transition-colors">
-                    {item}
+            <h3 className="mb-3 font-semibold">Quick Links</h3>
+            <ul className="space-y-2 text-sm">
+              {quickLinks.map((item) => (
+                <li key={item.label}>
+                  <Link href={item.href} className="text-[#c0c0c0] hover:text-[#EBDECF] transition-colors">
+                    {item.label}
                   </Link>
                 </li>
               ))}
@@ -62,16 +81,16 @@ export default function Footer() {
 
           {/* 3rd Column - More Links */}
           <div>
-            <h3 className="mb-6 text-lg font-semibold">More</h3>
-            <ul className="space-y-3">
-              {['News', 'Blog', 'FAQ'].map((item) => (
-                <li key={item}>
-                  <Link href={`/${item.toLowerCase()}`} className="text-white hover:text-[#EBDECF] transition-colors">
-                    {item}
+          <h3 className="mb-3 font-semibold">Services</h3>
+            <ul className="space-y-2 text-sm mb-3">
+              {services.map((item) => (
+                <li key={item.label}>
+                  <Link href={item.href} className="text-[#c0c0c0] hover:text-[#EBDECF] transition-colors">
+                    {item.label}
                   </Link>
                 </li>
               ))}
-            </ul>
+            </ul>          
           </div>
         </div>
 

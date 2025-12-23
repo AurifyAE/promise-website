@@ -1,28 +1,29 @@
 import Navbar from "@/app/components/Navbar";
 import Footer from "@/app/components/Footer";
 import { ArrowRight } from "lucide-react";
+import Link from "next/link";
+
 
 const policies = [
   {
-    title:
-      "Anti Money Laundering And Countering The Financing Of Terrorism Policy",
-    href: "#aml-cft-policy",
+    title: "View Supplier Chain Risk Policy 2024",
+    href: "/pdfs/policies/Supplier-Chain-Risk-Policy-2024.pdf",
   },
   {
-    title: "Grevience Policy",
-    href: "#grievance-policy",
+    title: "View Risk Based Assessment Policy 2024",
+    href: "/pdfs/policies/Risk-Based-Assessment-Policy-2024.pdf",
   },
   {
-    title: "Responsible Sourcing Policy",
-    href: "#responsible-sourcing",
+    title: "View PGR-AML CFT Policy 2024",
+    href: "/pdfs/policies/PGR-AML-CFT-Policy-2024.pdf",
   },
   {
-    title: "Due Diligence and Risk Assessment 2023",
-    href: "#due-diligence-2023",
+    title: "View Independent Reasonable Assurance Report 2024",
+    href: "/pdfs/policies/IndependentReasonableAssuranceReport-PromiseGold2025FINAL.pdf",
   },
   {
-    title: "Antibribery Policy 2023",
-    href: "#antibribery-2023",
+    title: "View PGR MOE Refiners Compliance Report 2024",
+    href: "/pdfs/policies/PGR-MOE-Refiners-Compliance-Report-2024.pdf",
   },
 ];
 
@@ -38,27 +39,28 @@ export default function CertificateAndPolicies() {
                 POLICIES AND CERTIFICATES
             </h2>
             
-            <p className="text-gray-700 leading-relaxed mb-12 max-w-4xl mx-auto text-center md:text-left">
+            <p className="text-gray-700 leading-relaxed mb-12 max-w-5xl mx-auto text-center md:text-left">
                 Promise Gold Refinery demonstrates its commitment to ethical and responsible business practices through a comprehensive set of policies and certifications. Our adherence to industry standards is evidenced by our AML-Certification, ensuring compliance with anti-money laundering and counter-financing of terrorism regulations. We maintain rigorous due diligence and risk assessment protocols, as outlined in our Due Diligence and Risk Assessment policy. Our dedication to fair practices is further reinforced by our Grievance policy, which provides a clear mechanism for addressing concerns. The Antibribery Policy underscores our zero-tolerance approach to corruption, while our Responsible Sourcing Policy guarantees that we procure materials ethically and sustainably. These policies collectively reflect Promise Gold Refinery's unwavering commitment to integrity, transparency, and responsible gold refining practices.
             </p>
           </div>
 
           <div className="grid gap-4 max-w-3xl mx-auto">
             {policies.map((policy) => (
-              <a
-                key={policy.title}
-                href={policy.href}
-                className="flex items-center justify-between rounded-2xl border border-gray-200 px-6 py-4 text-base md:text-lg font-semibold text-[#1F2B34] hover:bg-[#133C22] hover:text-[#F6E6BF] hover:border-[#133C22] transition-colors"
-              >
-                <span>{policy.title}</span>
-                <span className="text-xl" aria-hidden="true">
-                  <ArrowRight className="w-4 h-4" />
-                </span>
-              </a>
-            ))}
+            <Link
+              key={policy.title}
+              href={policy.href}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center justify-between rounded-2xl border border-gray-200 px-6 py-4 text-base md:text-lg font-semibold text-[#1F2B34] hover:bg-[#133C22] hover:text-[#F6E6BF] hover:border-[#133C22] transition-colors"
+            >
+              <span>{policy.title}</span>
+              <span className="text-xl" aria-hidden="true">
+                <ArrowRight className="w-4 h-4" />
+              </span>
+            </Link>
+          ))}
           </div>
         </section>
-
         </div>
 
         

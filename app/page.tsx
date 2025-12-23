@@ -6,6 +6,7 @@ import Testimonials from "./components/Testimonials";
 import Services from "./components/Services";
 import { products } from "@/data/products";
 import { ArrowRight } from "lucide-react";
+import Link from "next/link";
 
 export default function Home() {
 
@@ -98,7 +99,7 @@ export default function Home() {
                   WHY CHOOSE US
                 </h2>
 
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-12 gap-y-10 text-sm md:text-base">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-12 gap-y-10 text-sm md:text-base pb-8">
                   <div>
                     <h3 className="text-lg font-semibold text-[#C2882A] leading-snug">
                       Experience &amp;
@@ -145,11 +146,11 @@ export default function Home() {
                 </div>
               </div>
 
-              <div className="flex flex-col items-center lg:items-end justify-between gap-10">
-                <div className="relative h-96 w-80 bg-white -mt-30 -rotate-12 mb-10">
-                  <div className="absolute top-0 right-30 h-30 w-30 rounded-full bg-[#ECC273]" />
-                  <div className="absolute top-35 right-10 h-30 w-30 rounded-full bg-[#294734]/50" />
-                  <div className="absolute top-70 right-28 h-30 w-30 rounded-full bg-[#294734]" />
+              <div className="flex flex-col lg:items-end justify-between gap-10">
+                <div className="relative md:h-60 md:w-30 lg:h-96 lg:w-80 bg-white -mt-180 md:-mr-120 md:-mt-120 lg:mr-0 lg:-mt-30 -rotate-12 rounded-full mb-5 opacity-50 md:opacity-100">
+                  <div className="absolute right-5 md:right-15 lg:top-0 lg:right-30 w-12 h-12 md:w-15 md:h-15 lg:h-30 lg:w-30 rounded-full bg-[#ECC273]" />
+                  <div className="absolute top-15 right-0 md:top-18  md:right-5 lg:top-35 lg:right-10 w-12 h-12 md:w-15 md:h-15  lg:h-30 lg:w-30 rounded-full bg-[#294734]/50" />
+                  <div className="absolute top-30 md:top-28 right-5 md:right-10 lg:top-70 lg:right-28 w-12 h-12 md:w-15 md:h-15 lg:h-30 lg:w-30 rounded-full bg-[#294734]" />
                 </div>
 
                 <button className="rounded-full bg-[#E3C9A4] px-6 py-3 text-xs md:text-sm tracking-wide text-black shadow-sm transition-colors hover:bg-[#d1b384] flex items-center justify-center gap-2">
@@ -216,9 +217,12 @@ export default function Home() {
               <p className="text-gray-700 leading-relaxed mb-8">
                 At Promise Gold Refinery, we are committed to ethical sourcing and sustainable refining practices. We follow OECD guidelines to ensure all precious metals are responsibly obtained and processed with full environmental and social compliance.
               </p>
-              <button className="bg-[#EBDECF] hover:bg-[#D9C8B4] text-black py-3 px-8 rounded-full transition-colors duration-300 flex items-center justify-center gap-2">
+              <Link
+                href="/ethical-refining"
+                className="bg-[#EBDECF] hover:bg-[#D9C8B4] text-black py-3 px-8 rounded-full transition-colors duration-300 flex items-center justify-center gap-2"
+              >
                 Our Responsible Practices <ArrowRight className="w-4 h-4" />
-              </button>
+              </Link>
             </div>
             <div className="lg:order-2">
               <div className="relative overflow-hidden shadow-xl">

@@ -106,7 +106,7 @@ export default function Testimonials() {
         <div className="max-w-6xl mx-auto">
           <div
             ref={viewportRef}
-            className="overflow-hidden rounded-[3rem] touch-pan-y"
+            className="overflow-hidden rounded-4xl md:rounded-[3rem] touch-pan-y"
             style={{
               touchAction: 'pan-y',
               WebkitUserSelect: 'none',
@@ -131,12 +131,12 @@ export default function Testimonials() {
                   className="flex-none w-[90%] px-2 sm:w-3/4 md:w-1/2 lg:w-1/2"
                 >
                   <motion.div
-                    className="group relative aspect-square rounded-full bg-[#EBDECF] p-8 sm:p-10 flex flex-col items-center justify-center text-center shadow-lg border border-[#d5c3ad]"
+                    className="group relative aspect-square rounded-4xl md:rounded-[90px] lg:rounded-full bg-[#EBDECF] p-8 sm:p-10 flex flex-col items-center justify-center text-center shadow-lg border border-[#d5c3ad]"
                   >
-                    <span className="absolute -top-3 text-5xl text-[#CC9B5A]">
+                    <span className="absolute -top-1 text-5xl text-[#CC9B5A]">
                       &ldquo;
                     </span>
-                    <p className="text-gray-700 italic mb-6 leading-relaxed px-2">
+                    <p className="text-gray-700 text-sm md:text-base italic mb-6 leading-relaxed px-2">
                       {`"${t.quote}"`}
                     </p>
                     <div className="font-semibold text-[#1A1A1A]">{t.name}</div>

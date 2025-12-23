@@ -27,10 +27,10 @@ export default function Contact() {
           {/* Left Side - Contact Information */}
           <div className="relative bg-[#294734]/90 flex flex-col justify-between backdrop-blur-sm p-12 rounded-lg overflow-hidden">
             <div className='mb-6'>
-              <h2 className="text-3xl font-semibold mb-1">Contact Information</h2>
-              <p className='text-lg '>Say something to start a live chat!</p>
+              <h2 className="text-2xl md:text-3xl font-semibold mb-1">Contact Information</h2>
+              <p className='text-base md:text-lg '>Say something to start a live chat!</p>
             </div>
-            <div className="space-y-6">
+            <div className="space-y-6 text-sm md:text-base">
               <div className="flex items-center space-x-4">
                 <div className="">
                 <Image
@@ -60,7 +60,7 @@ export default function Contact() {
                 />
                 </div>
                 <div>
-                  <p className="text-[#FCF7F1]">compliance@promisegoldrefinery.com
+                  <p className="text-[#FCF7F1]">compliance@promisegoldrefinery.com<br />
                   promisegoldrefinery@gmail.com</p>
                 </div>
               </div>
@@ -99,7 +99,7 @@ export default function Contact() {
                   priority
                 />
               </Link>
-              <Link href="#" className="bg-white h-8 w-8 text-white hover:text-[#EBDECF] transition-colors flex items-center justify-center rounded-full">
+              <Link href="instagram.com" target='_blank' className="bg-white h-8 w-8 text-white hover:text-[#EBDECF] transition-colors flex items-center justify-center rounded-full">
                 <span className="sr-only">Instagram</span>
                 <Image
                   src="/icons/instagram.svg"
@@ -110,7 +110,7 @@ export default function Contact() {
                   priority
                 />
               </Link>
-              <Link href="#" className="bg-black h-8 w-8 text-white hover:text-[#EBDECF] transition-colors flex items-center justify-center rounded-full">
+              <Link href="https://api.whatsapp.com/send/?phone=971505794931&text&type=phone_number&app_absent=0" target='_blank' className="bg-black h-8 w-8 text-white hover:text-[#EBDECF] transition-colors flex items-center justify-center rounded-full">
                 <span className="sr-only">WhatsApp</span>
                 <Image
                   src="/icons/whatsapp.svg"
@@ -123,8 +123,8 @@ export default function Contact() {
               </Link>
             </div>
 
-            <div className='absolute -bottom-15 -right-15 w-60 h-60 bg-[#133C22] rounded-full' />
-            <div className='absolute bottom-23 right-20 w-32 h-32 bg-[#A869075C] rounded-full' />
+            <div className='absolute -bottom-8 -right-8 md:-bottom-15 md:-right-15 w-30 h-30 md:w-60 md:h-60 bg-[#133C22] rounded-full' />
+            <div className='absolute bottom-8 right-10 md:bottom-22 md:right-23 lg:bottom-20 lg:right-23 w-16 h-16 md:w-32 md:h-32 bg-[#A869075C] rounded-full' />
           </div>
 
           {/* Right Side - Contact Form */}
