@@ -99,9 +99,18 @@ export default function Testimonials() {
   return (
     <section className="py-20 bg-white">
       <div className="container mx-auto px-4">
-        <h2 className="text-4xl text-black font-bold text-center mb-16">
+        <motion.h2
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-50px" }}
+          transition={{
+            duration: 0.8,
+            ease: [0.16, 1, 0.3, 1],
+          }}
+          className="text-4xl text-black font-bold text-center mb-16"
+        >
           Trusted by Industry Leaders
-        </h2>
+        </motion.h2>
 
         <div className="max-w-6xl mx-auto">
           <div
@@ -131,16 +140,68 @@ export default function Testimonials() {
                   className="flex-none w-[90%] px-2 sm:w-3/4 md:w-1/2 lg:w-1/2"
                 >
                   <motion.div
+                    initial={{ opacity: 0, x: 100, scale: 0.40 }}
+                    whileInView={{ opacity: 1, x: 0, scale: 1 }}
+                    viewport={{ once: true, margin: "-100px" }}
+                    transition={{
+                      duration: 0.8,
+                      delay: i * 0.40,
+                      ease: [0.16, 1, 0.3, 1],
+                    }}
                     className="group relative aspect-square rounded-4xl md:rounded-[90px] lg:rounded-full bg-[#EBDECF] p-8 sm:p-10 flex flex-col items-center justify-center text-center shadow-lg border border-[#d5c3ad]"
                   >
-                    <span className="absolute -top-1 text-5xl text-[#CC9B5A]">
+                    <motion.span
+                      initial={{ opacity: 0, scale: 0.5, rotate: -20 }}
+                      whileInView={{ opacity: 1, scale: 1, rotate: 0 }}
+                      viewport={{ once: true }}
+                      transition={{
+                        duration: 0.5,
+                        delay: i * 0.2 + 0.3,
+                        ease: [0.16, 1, 0.3, 1],
+                      }}
+                      className="absolute -top-1 text-5xl text-[#CC9B5A]"
+                    >
                       &ldquo;
-                    </span>
-                    <p className="text-gray-700 text-sm md:text-base italic mb-6 leading-relaxed px-2">
+                    </motion.span>
+                    <motion.p
+                      initial={{ opacity: 0, y: 20 }}
+                      whileInView={{ opacity: 1, y: 0 }}
+                      viewport={{ once: true }}
+                      transition={{
+                        duration: 0.6,
+                        delay: i * 0.2 + 0.4,
+                        ease: [0.16, 1, 0.3, 1],
+                      }}
+                      className="text-gray-700 text-sm md:text-base italic mb-6 leading-relaxed px-2"
+                    >
                       {`"${t.quote}"`}
-                    </p>
-                    <div className="font-semibold text-[#1A1A1A]">{t.name}</div>
-                    <div className="text-sm text-gray-600">{t.position}</div>
+                    </motion.p>
+                    <motion.div
+                      initial={{ opacity: 0, x: -15 }}
+                      whileInView={{ opacity: 1, x: 0 }}
+                      viewport={{ once: true }}
+                      transition={{
+                        duration: 0.5,
+                        delay: i * 0.2 + 0.5,
+                        ease: [0.16, 1, 0.3, 1],
+                      }}
+                      className="font-semibold text-[#1A1A1A]"
+                    >
+                      {t.name}
+                    </motion.div>
+                    <motion.div
+                      initial={{ opacity: 0, x: -15 }}
+                      whileInView={{ opacity: 1, x: 0 }}
+                      viewport={{ once: true }}
+                      transition={{
+                        duration: 0.5,
+                        delay: i * 0.2 + 0.6,
+                        ease: [0.16, 1, 0.3, 1],
+                      }}
+                      className="text-sm text-gray-600"
+                    >
+                      {t.position}
+                    </motion.div>
                   </motion.div>
                 </div>
               ))}

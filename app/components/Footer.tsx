@@ -24,7 +24,7 @@ const services = [
 export default function Footer() {
   return (
     <footer className="bg-[#294734] text-white">
-      <div className="container mx-auto px-4 py-16 md:px-8">
+      <div className="container mx-auto px-4 py-12 md:px-8">
         <div className="grid grid-cols-1 gap-12 md:grid-cols-2 lg:grid-cols-4">
           {/* 1st Column - Logo and Newsletter */}
           <div className="space-y-6 md:col-span-2">
@@ -95,7 +95,7 @@ export default function Footer() {
         </div>
 
         {/* Bottom Bar */}
-        <div className="mt-16 border-t border-gray-800 pt-8">
+        <div className="mt-8 border-t border-gray-800 pt-8">
           <div className="flex flex-col items-center justify-between md:flex-row">
             <p className="text-sm text-gray-400">
               © 2025 Promise Gold Refinery. All rights reserved
