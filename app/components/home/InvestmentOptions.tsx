@@ -4,6 +4,7 @@ import { motion } from 'framer-motion';
 import Image from 'next/image';
 import { ArrowRight } from 'lucide-react';
 import { products } from '@/data/products';
+import Link from 'next/link';
 
 const InvestmentOptions = () => {
   return (
@@ -71,7 +72,9 @@ const InvestmentOptions = () => {
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.95 }}
             >
-              <ArrowRight className="w-4 h-4 text-black" />
+              <Link href="/products" className="flex items-center justify-center">
+                <ArrowRight className="w-4 h-4 text-black" />
+              </Link>
             </motion.button>
             <motion.h2 
               className="text-4xl md:text-5xl font-bold tracking-tight text-black text-right lg:text-left lg:-rotate-6 leading-tight whitespace-nowrap"

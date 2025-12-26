@@ -15,7 +15,7 @@ const servicesSubmenu = [
 
 const menuItems = [
   { label: 'Home', path: '/' },
-  { label: 'About Us', path: '/about' },
+  { label: 'About Us', path: '/about-us' },
   { label: 'Services', path: '/services', submenu: servicesSubmenu },
   { label: 'Products', path: '/products' },
   { label: 'Team', path: '/teams' },

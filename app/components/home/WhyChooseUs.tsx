@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion';
 import { ArrowRight } from 'lucide-react';
+import Link from 'next/link';
 
 const WhyChooseUs = () => {
   return (
@@ -160,7 +161,9 @@ const WhyChooseUs = () => {
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
               >
-                LEARN MORE ABOUT OUR PROCESS <ArrowRight className="w-4 h-4" />
+                <Link href="/about-us" className="flex items-center justify-center gap-2">
+                  LEARN MORE ABOUT OUR PROCESS <ArrowRight className="w-4 h-4" />
+                </Link>
               </motion.button>
             </div>
           </div>

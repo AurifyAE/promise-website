@@ -1,6 +1,7 @@
 'use client'
 import { motion } from 'framer-motion';
 import { ArrowRight } from 'lucide-react';
+import Link from 'next/link';
 
 function AnimatedHeading({ text, delay = 0 }: { text: string; delay?: number }) {
     return (
@@ -78,9 +79,11 @@ export default function HeroSection() {
                         transition={{ delay: 2.8, duration: 0.8, ease: "easeOut" }}
                         whileHover={{ scale: 1.05 }}
                         whileTap={{ scale: 0.95 }}
-                        className="rounded-full bg-[#ECC273] px-6 py-3 text-sm md:text-base text-black transition-colors hover:bg-[#d4b28a] flex items-center justify-center gap-2"
+                        className="rounded-full bg-[#ECC273] px-6 py-3 text-sm md:text-base text-black transition-colors hover:bg-[#d4b28a] "
                     >
-                        Explore Our Services <ArrowRight className="w-4 h-4" />
+                        <Link href="/services" className='flex items-center justify-center gap-2'>
+                            Explore Our Services <ArrowRight className="w-4 h-4" />
+                        </Link>
                     </motion.button>
                 </motion.div>
             </div>
