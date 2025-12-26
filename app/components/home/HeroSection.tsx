@@ -2,37 +2,27 @@
 import { motion } from 'framer-motion';
 import { ArrowRight } from 'lucide-react';
 
-const container = {
-    hidden: { opacity: 0 },
-    visible: (delay: number = 0) => ({
-        opacity: 1,
-        transition: {
-            delayChildren: delay,
-            staggerChildren: 0.05, // Smooth letter stagger
-        },
-    }),
-};
-
-const child = {
-    hidden: { opacity: 0, y: 20 },
-    visible: {
-        opacity: 1,
-        y: 0,
-        transition: { type: "spring", stiffness: 300, damping: 20 },
-    },
-};
-
-function AnimatedHeading({ text, delay }: { text: string; delay?: number }) {
+function AnimatedHeading({ text, delay = 0 }: { text: string; delay?: number }) {
     return (
         <motion.h1
             className="mb-1 text-3xl md:text-4xl lg:text-5xl"
-            variants={container}
-            initial="hidden"
-            animate="visible"
-            custom={delay}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.5, delay }}
         >
             {text.split("").map((char, i) => (
-                <motion.span key={i} variants={child} className="inline-block">
+                <motion.span
+                    key={i}
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{
+                        type: "spring",
+                        stiffness: 300,
+                        damping: 20,
+                        delay: delay + i * 0.05,
+                    }}
+                    className="inline-block"
+                >
                     {char === " " ? "\u00A0" : char}
                 </motion.span>
             ))}
@@ -104,7 +94,7 @@ export default function HeroSection() {
             >
                 {/* Arrow - always centered in initial state, moves slightly on hover */}
                 <motion.div
-                    className="flex h-16 w-16 flex-shrink-0 items-center justify-center rounded-full bg-black/70"
+                    className="flex h-16 w-16 shrink-0 items-center justify-center rounded-full bg-black/70"
                     whileHover={{ scale: 1.1 }}
                     transition={{ duration: 0.3 }}
                 >
