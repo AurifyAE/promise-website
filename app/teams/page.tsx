@@ -3,6 +3,7 @@ import Image from "next/image";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import Contact from "../components/Contact";
+import { motion } from "framer-motion";
 
 const teamMembers = [
   {
@@ -38,10 +39,14 @@ type TeamMember = {
   description: string;
 };
 
-function TeamMemberCard({ member }: { member: TeamMember }) {
+function TeamMemberCard({ member, index }: { member: TeamMember; index: number }) {
   return (
-    <div
+    <motion.div
       className="group shrink-0 w-[280px] md:w-[320px] h-[360px] md:h-[380px] bg-[#ECC273] rounded-lg p-6 shadow-md overflow-hidden transition-colors duration-300 ease-out hover:bg-[#294734]"
+      initial={{ opacity: 0, y: 60 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.5, delay: index * 0.13 }}
     >
       <div className="flex flex-col items-center h-full">
         {/* Circular Image */}
@@ -75,7 +80,7 @@ function TeamMemberCard({ member }: { member: TeamMember }) {
           {member.description}
         </p>
       </div>
-    </div>
+    </motion.div>
   );
 }
 
@@ -83,24 +88,34 @@ export default function TeamsPage() {
   return (
     <div className="min-h-screen bg-white">
       <Navbar />
-      
+
       <div className="pt-20 md:pt-24">
         {/* OUR TEAM Section */}
         <section className="pt-20 px-4 md:px-8">
           <div className="container mx-auto">
-            <h2 className="text-4xl md:text-5xl font-bold text-black text-center mb-8">
+            <motion.h2
+              className="text-4xl md:text-5xl font-bold text-black text-center mb-8"
+              initial={{ opacity: 0, y: -30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.7 }}
+            >
               OUR TEAM
-            </h2>
-            
-            <p className="text-gray-700 leading-relaxed mb-12 max-w-4xl mx-auto text-center md:text-left">
+            </motion.h2>
+
+            <motion.p
+              className="text-gray-700 leading-relaxed mb-12 max-w-4xl mx-auto text-center md:text-left"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 1.0, delay: 0.3 }}
+            >
               At Promise Gold Refinery, our team embodies the pinnacle of expertise and dedication in the precious metals industry. From our skilled technicians meticulously handling each step of the refining process to our astute analysts ensuring the highest standards of quality control, every member of our team is committed to delivering unparalleled results
-            </p>
+            </motion.p>
 
             {/* Scrollable Team Cards */}
             {/* <div className="overflow-x-auto pb-4 scrollbar-hide">
               <div className="flex gap-6 min-w-max px-2">
               {teamMembers.map((member, index) => (
-                <TeamMemberCard key={index} member={member} />
+                <TeamMemberCard key={index} member={member} index={index} />
               ))}
               </div>
             </div> */}
@@ -112,17 +127,29 @@ export default function TeamsPage() {
           <div className="container mx-auto">
             <div className="grid grid-cols-1 gap-12 items-center">
               {/* Left Side - Text */}
-              <div className="text-center order-2">
+              <motion.div
+                className="text-center order-2"
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.7, delay: 0.2 }}
+              >
                 <h2 className="text-4xl md:text-5xl font-bold text-black mb-6">
                   QUALITY ASSURANCE
                 </h2>
                 <p className="text-gray-700 leading-relaxed text-base md:text-lg">
                   Conveying the gold refinery's unwavering dedication to prioritizing excellence and integrity in its refined gold products.
                 </p>
-              </div>
+              </motion.div>
 
               {/* Right Side - Group Photo */}
-              <div className="relative">
+              <motion.div
+                className="relative"
+                initial={{ opacity: 0, scale: 0.96 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.7, delay: 0.25 }}
+              >
                 <div className="relative h-[400px] md:h-[500px] rounded-lg overflow-hidden">
                   <Image
                     src="/images/team/teams.jpg"
@@ -135,7 +162,9 @@ export default function TeamsPage() {
                     }}
                   />
                 </div>
-              </div>
+                <div className="w-[520px] h-[520px] absolute top-[50%] -translate-y-[50%] -left-80 bg-[#ECC273] rounded-full"></div>
+                <div className="w-[520px] h-[520px] absolute top-[50%] -translate-y-[50%] -right-80 bg-[#ECC273] rounded-full"></div>
+              </motion.div>
             </div>
           </div>
         </section>
@@ -146,4 +175,3 @@ export default function TeamsPage() {
     </div>
   );
 }
-
