@@ -19,7 +19,7 @@ const menuItems = [
   { label: 'Services', path: '/services', submenu: servicesSubmenu },
   { label: 'Products', path: '/products' },
   { label: 'Team', path: '/teams' },
-  { label: 'Contact', path: '/contact' },
+  { label: 'Contact', path: '/contact-us' },
   { label: 'Policies & Certifications', path: '/certificate-and-policies' },
   { label: 'Gallery', path: '/gallery' },
 ];
