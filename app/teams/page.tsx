@@ -86,7 +86,7 @@ function TeamMemberCard({ member, index }: { member: TeamMember; index: number }
 
 export default function TeamsPage() {
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-white overflow-x-hidden">
       <Navbar />
 
       <div className="pt-20 md:pt-24">
@@ -162,8 +162,8 @@ export default function TeamsPage() {
                     }}
                   />
                 </div>
-                <div className="w-[520px] h-[520px] absolute top-[50%] -translate-y-[50%] -left-80 bg-[#ECC273] rounded-full"></div>
-                <div className="w-[520px] h-[520px] absolute top-[50%] -translate-y-[50%] -right-80 bg-[#ECC273] rounded-full"></div>
+                <div className="hidden md:block w-[520px] h-[520px] absolute top-[50%] -translate-y-[50%] -left-80 bg-[#ECC273] rounded-full"></div>
+                <div className="hidden md:block w-[520px] h-[520px] absolute top-[50%] -translate-y-[50%] -right-80 bg-[#ECC273] rounded-full"></div>
               </motion.div>
             </div>
           </div>
