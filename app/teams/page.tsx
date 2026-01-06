@@ -103,7 +103,7 @@ export default function TeamsPage() {
             </motion.h2>
 
             <motion.p
-              className="text-gray-700 leading-relaxed mb-12 max-w-4xl mx-auto text-center md:text-left"
+              className="text-gray-700 leading-relaxed mb-12 max-w-4xl mx-auto text-center md:text-left text-sm md:text-base"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 1.0, delay: 0.3 }}
@@ -137,7 +137,7 @@ export default function TeamsPage() {
                 <h2 className="text-4xl md:text-5xl font-bold text-black mb-6">
                   QUALITY ASSURANCE
                 </h2>
-                <p className="text-gray-700 leading-relaxed text-base md:text-lg">
+                <p className="text-gray-700 leading-relaxed text-sm md:text-base">
                   Conveying the gold refinery's unwavering dedication to prioritizing excellence and integrity in its refined gold products.
                 </p>
               </motion.div>

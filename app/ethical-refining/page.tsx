@@ -27,11 +27,11 @@ export default function EthicalRefining() {
       {/* Content */}
       <section className="py-16 px-4 md:px-8">
         <div className="container mx-auto max-w-5xl space-y-10 text-[#1A1A1A]">
-          <p className="text-base md:text-lg leading-relaxed">
+          <p className="text-sm md:text-base leading-relaxed">
             At Promise Gold Refinery, ethical refining and adherence to global standards are at the heart of everything we do. As a trusted precious metals refinery based in Sharjah, we are committed to responsible practices that ensure every ounce of gold we process is refined with integrity, transparency, and respect for people and the planet — setting a benchmark in the industry for ethical excellence.
           </p>
 
-          <div className="space-y-3">
+          <div className="space-y-3 text-sm md:text-base">
             <h2 className="text-2xl md:text-3xl font-bold text-black">
               Responsible Sourcing You Can Trust
             </h2>
@@ -45,7 +45,7 @@ export default function EthicalRefining() {
             </ul>
           </div>
 
-          <div className="space-y-3">
+          <div className="space-y-3 text-sm md:text-base">
             <h2 className="text-2xl md:text-3xl font-bold text-black">
               Global Compliance &amp; Best Practices
             </h2>
@@ -62,7 +62,7 @@ export default function EthicalRefining() {
             </p>
           </div>
 
-          <div className="space-y-3">
+          <div className="space-y-3 text-sm md:text-base">
             <h2 className="text-2xl md:text-3xl font-bold text-black">
               Environmental &amp; Social Responsibility
             </h2>
@@ -79,7 +79,7 @@ export default function EthicalRefining() {
             </p>
           </div>
 
-          <div className="space-y-3">
+          <div className="space-y-3 text-sm md:text-base">
             <h2 className="text-2xl md:text-3xl font-bold text-black">
               Transparency &amp; Accountability
             </h2>
