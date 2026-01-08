@@ -249,7 +249,7 @@ export default function GoldRefining() {
 
       <Faq faqData={faqData} />
 
-      <Testimonials />
+      {/* <Testimonials /> */}
       <Footer />
     </div>
   );

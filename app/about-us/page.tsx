@@ -201,7 +201,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <Testimonials />
+      {/* <Testimonials /> */}
       <Contact />
       <Footer />
     </div>

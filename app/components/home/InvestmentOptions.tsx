@@ -35,20 +35,20 @@ const InvestmentOptions = () => {
                 >
                   <div className="relative h-72 w-56 flex items-end justify-center">
                     <Image
-                      src={product.imageSrc}
+                      src={product.images[0]}
                       alt={product.name}
                       fill
                       className="object-contain drop-shadow-xl"
                     />
                   </div>
                   <div
-                    className={`-mt-6 h-18 rounded-full bg-black flex items-center justify-center text-[10px] tracking-[0.2em] text-white uppercase ${
+                    className={`-mt-6 h-18 rounded-full bg-black flex items-center justify-center text-[10px] tracking-[0.2em] text-white uppercase px-2 ${
                       product.id === 'gold-1kg'
                         ? 'w-56 text-center'
                         : 'w-56'
                     }`}
                   >
-                    {product.weightLabel}
+                    {product.name}
                   </div>
                 </motion.div>
               ))}
@@ -64,7 +64,7 @@ const InvestmentOptions = () => {
             transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
           >
             <motion.button 
-              className="flex h-14 w-14 items-center justify-center rounded-full bg-[#ECC273] shadow-md transition-transform hover:scale-105"
+              className="flex h-14 w-14 items-center justify-center rounded-full bg-[#ECC273] shadow-md transition-transform hover:scale-105 cursor-pointer"
               initial={{ opacity: 0, scale: 0 }}
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}

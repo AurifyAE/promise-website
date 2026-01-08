@@ -33,7 +33,7 @@ export default function ProductsPage() {
               >
                 <div className="relative h-64 w-40 flex items-end justify-center">
                   <Image
-                    src={product.imageSrc}
+                    src={product.images[0]}
                     alt={product.name}
                     fill
                     className="object-contain drop-shadow-xl transition-transform duration-300 group-hover:-translate-y-1"

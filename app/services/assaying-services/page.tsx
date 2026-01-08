@@ -251,7 +251,7 @@ export default function AssayingServices() {
 
       <Faq faqData={faqData} />
 
-      <Testimonials />
+      {/* <Testimonials /> */}
       <Footer />
     </div>
   );

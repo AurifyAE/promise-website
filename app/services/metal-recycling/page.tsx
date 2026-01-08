@@ -250,7 +250,7 @@ export default function MetalRecycling() {
 
       <Faq faqData={faqData} />
 
-      <Testimonials />
+      {/* <Testimonials /> */}
       <Footer />
     </div>
   );

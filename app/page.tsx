@@ -30,7 +30,7 @@ export default function Home() {
 
       <EthicalRefiningSection />
 
-      <Testimonials />
+      {/* <Testimonials /> */}
 
       <Contact />
       <Footer />

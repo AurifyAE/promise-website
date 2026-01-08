@@ -7,14 +7,14 @@ import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 
 const galleryImages = [
-  { id: 1, src: "/images/home/gold-refining.jpg", alt: "Gallery Image 1" },
-  { id: 2, src: "/images/home/gold-refining.jpg", alt: "Gallery Image 2" },
-  { id: 3, src: "/images/home/gold-refining.jpg", alt: "Gallery Image 3" },
-  { id: 4, src: "/images/home/gold-refining.jpg", alt: "Gallery Image 4" },
-  { id: 5, src: "/images/home/gold-refining.jpg", alt: "Gallery Image 5" },
-  { id: 6, src: "/images/home/gold-refining.jpg", alt: "Gallery Image 6" },
-  { id: 7, src: "/images/home/gold-refining.jpg", alt: "Gallery Image 7" },
-  { id: 8, src: "/images/home/gold-refining.jpg", alt: "Gallery Image 8" },
+  { id: 1, src: "/images/gallery/group_gold_1.jpg", alt: "Gold Refining Process" },
+  { id: 2, src: "/images/gallery/group-2.jpg", alt: "Gold Bar Manufacturing" },
+  { id: 3, src: "/images/gallery/group-3.jpg", alt: "Gold Refining Facility" },
+  { id: 4, src: "/images/gallery/group-4.jpg", alt: "Precious Metal Processing" },
+  { id: 5, src: "/images/gallery/group-5.jpg", alt: "Gold Casting Process" },
+  { id: 6, src: "/images/gallery/group-6.jpg", alt: "Gold Quality Inspection" },
+  { id: 7, src: "/images/gallery/group-7.jpg", alt: "Gold Refinery Operations" },
+  { id: 8, src: "/images/gallery/group-8.jpg", alt: "Gold Refining Equipment" },
 ];
 
 export default function GalleryPage() {

@@ -3,7 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
-
+import { useState, useEffect } from "react";
 import { products } from "@/data/products";
 import Navbar from "@/app/components/Navbar";
 import Footer from "@/app/components/Footer";
@@ -11,42 +11,6 @@ import { use } from "react";
 import Contact from "@/app/components/Contact";
 import Testimonials from "@/app/components/Testimonials";
 
-const productSpecs: Record<
-  string,
-  {
-    weight: string;
-    length: string;
-    diameter: string;
-    thickness: string;
-    fineness: string;
-    certification: string;
-  }
-> = {
-  "gold-250g": {
-    weight: "250 g",
-    length: "50 mm",
-    diameter: "24 mm",
-    thickness: "4.0 mm",
-    fineness: "999.9",
-    certification: "LBMA",
-  },
-  "gold-500g": {
-    weight: "500 g",
-    length: "85 mm",
-    diameter: "30 mm",
-    thickness: "7.0 mm",
-    fineness: "999.9",
-    certification: "LBMA",
-  },
-  "gold-1kg": {
-    weight: "1 kg",
-    length: "116.5 mm",
-    diameter: "51 mm",
-    thickness: "9.5 mm",
-    fineness: "999",
-    certification: "LBMA",
-  },
-};
 
 export default function ProductDetailPage({
   params,
@@ -55,7 +19,12 @@ export default function ProductDetailPage({
 }) {
   const { id } = use(params);
   const current = products.find((p) => p.id === id) ?? products[0];
-  const specs = productSpecs[id] ?? productSpecs["gold-1kg"];
+  const specs = current.specs;
+  const [activeImage, setActiveImage] = useState(0);
+
+  useEffect(() => {
+    setActiveImage(0);
+  }, [id]);
 
   return (
     <div className="min-h-screen bg-white">
@@ -98,7 +67,7 @@ export default function ProductDetailPage({
                         >
                           <div className="relative h-48 w-32 md:h-56 md:w-40 flex items-end justify-center">
                             <Image
-                              src={product.imageSrc}
+                              src={product.images[0]}
                               alt={product.name}
                               fill
                               className="object-contain drop-shadow-xl transition-transform duration-300 group-hover:-translate-y-1"
@@ -179,14 +148,26 @@ export default function ProductDetailPage({
                 }}
                 className="flex flex-col items-center col-span-1"
               >
+                {/* MAIN IMAGE */}
                 <div className="relative h-80 w-56 md:h-80 md:w-56 flex items-end justify-center">
-                  <Image
-                    src={current.imageSrc}
-                    alt={current.name}
-                    fill
-                    className="object-contain drop-shadow-2xl"
-                  />
+                  <motion.div
+                    key={activeImage}
+                    initial={{ opacity: 0, scale: 0.95 }}
+                    animate={{ opacity: 1, scale: 1 }}
+                    transition={{ duration: 0.3, ease: [0.16, 1, 0.3, 1] }}
+                    className="absolute inset-0"
+                  >
+                    <Image
+                      src={current.images?.[activeImage] ?? current.images?.[0]}
+                      alt={current.name}
+                      fill
+                      className="object-contain drop-shadow-2xl"
+                      priority
+                    />
+                  </motion.div>
                 </div>
+
+                {/* WEIGHT BADGE */}
                 <motion.div
                   initial={{ opacity: 0, y: 10 }}
                   whileInView={{ opacity: 1, y: 0 }}
@@ -196,11 +177,40 @@ export default function ProductDetailPage({
                     delay: 0.2,
                     ease: [0.16, 1, 0.3, 1],
                   }}
-                  className="mt-4 h-16 w-56 rounded-full bg-black flex items-center justify-center text-[10px] tracking-[0.2em] text-white uppercase"
+                  className="mt-6 h-16 w-56 rounded-full bg-black flex items-center justify-center text-[10px] tracking-[0.2em] text-white uppercase"
                 >
-                  {specs.weight.toUpperCase()} GOLD BAR
+                  {current.name.toUpperCase()}
                 </motion.div>
+
+                {/* THUMBNAILS */}
+                {current.images.length > 1 && (
+                  <div className="mt-6 flex gap-3">
+                    {current.images.map((img, index) => (
+                      <button
+                        key={index}
+                        onClick={() => setActiveImage(index)}
+                        className={`relative h-16 w-12 rounded-lg border overflow-hidden transition-all ${
+                          activeImage === index
+                            ? "border-black"
+                            : "border-gray-300 opacity-70 hover:opacity-100"
+                        }`}
+                      >
+                        <Image
+                          src={img}
+                          alt={`${current.name} thumbnail ${index + 1}`}
+                          fill
+                          sizes="48px"
+                          className="object-contain"
+                        />
+                      </button>
+                    ))}
+                  </div>
+                )}
+
+
+                
               </motion.div>
+
 
               {/* Specs card */}
               <motion.div
@@ -227,7 +237,7 @@ export default function ProductDetailPage({
                       }}
                       className="text-2xl md:text-3xl font-semibold text-black"
                     >
-                      {current.name.replace("Gold Bar", "")}Gold Bar
+                      {current.name}
                     </motion.h2>
                     <motion.button
                       initial={{ opacity: 0, scale: 0.9 }}
@@ -261,14 +271,14 @@ export default function ProductDetailPage({
                       Specifications
                     </motion.p>
                     <div className="grid grid-cols-2 md:grid-cols-3 gap-3 text-xs md:text-sm">
-                      <SpecCard label="WEIGHT" value={specs.weight} index={0} />
-                      <SpecCard label="LENGTH" value={specs.length} index={1} />
-                      <SpecCard label="DIAMETER" value={specs.diameter} index={2} />
-                      <SpecCard label="THICKNESS" value={specs.thickness} index={3} />
-                      <SpecCard label="FINENESS" value={specs.fineness} index={4} />
+                      <SpecCard label="Weight" value={specs.weight} index={0} />
+                      <SpecCard label="Width" value={specs.width} index={1} />
+                      <SpecCard label="Height" value={specs.height } index={2} />
+                      <SpecCard label="Breadth" value={specs.breadth} index={3} />
+                      <SpecCard label="Fineness" value={specs.fineness} index={4} />
                       <SpecCard
-                        label="CERTIFICATION"
-                        value={specs.certification}
+                        label="Certification"
+                        value={specs.certification ?? "-"}
                         index={5}
                       />
                     </div>
@@ -280,7 +290,7 @@ export default function ProductDetailPage({
         </div>
       </main>
         
-      <Testimonials />
+      {/* {/* <Testimonials /> */}
       <Contact />
       <Footer />
     </div>
