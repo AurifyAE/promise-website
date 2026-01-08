@@ -39,8 +39,8 @@ export default function ProductsPage() {
                     className="object-contain drop-shadow-xl transition-transform duration-300 group-hover:-translate-y-1"
                   />
                 </div>
-                <div className="-mt-6 h-16 w-44 rounded-full bg-black flex items-center justify-center text-[10px] tracking-[0.18em] text-white uppercase">
-                  {product.weightLabel}
+                <div className="-mt-6 h-18 w-56 rounded-full bg-black flex items-center justify-center text-[10px] tracking-[0.18em] text-white text-center uppercase px-2">
+                  {product.name}
                 </div>
               </Link>
             ))}

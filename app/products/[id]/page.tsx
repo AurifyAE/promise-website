@@ -46,7 +46,7 @@ export default function ProductDetailPage({
                 }}
                 className="overflow-x-auto pb-4 scrollbar-hide"
               >
-                <div className="flex gap-10 min-w-max">
+                <div className="flex gap-2 min-w-max">
                   {products.map((product, index) => {
                     const isActive = product.id === id;
                     return (
@@ -70,17 +70,17 @@ export default function ProductDetailPage({
                               src={product.images[0]}
                               alt={product.name}
                               fill
-                              className="object-contain drop-shadow-xl transition-transform duration-300 group-hover:-translate-y-1"
+                              className="object-contain z-1 drop-shadow-xl transition-transform duration-300 group-hover:-translate-y-1"
                             />
                           </div>
                           <div
-                            className={`-mt-6 h-14 w-40 rounded-full bg-black flex items-center justify-center text-[10px] tracking-[0.18em] text-white uppercase transition-all duration-300 ${
+                            className={`-mt-4 h-14 w-52 rounded-full bg-black flex items-center justify-center text-[10px] tracking-[0.18em] text-white uppercase transition-all duration-300 ${
                               isActive
                                 ? "opacity-100 translate-y-0"
                                 : "opacity-70 group-hover:opacity-100 group-hover:-translate-y-0.5"
                             }`}
                           >
-                            {product.weightLabel}
+                            {product.name.replace(/GOLD KILO BAR|GOLD BAR|SILVER BAR|KILOBAR|KILO BAR| GOLD TT BAR|for Fire assay Lab analysis/gi, "").trim()}
                           </div>
                         </Link>
                       </motion.div>

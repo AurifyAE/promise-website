@@ -21,6 +21,11 @@ const InvestmentOptions = () => {
           >
             <div className="flex gap-10 min-w-max">
               {products.map((product, index) => (
+                <Link
+                key={product.id}
+                href={`/products/${product.id}`}
+                className="group flex flex-col items-center"
+              >
                 <motion.div
                   key={product.id}
                   className="flex flex-col items-center"
@@ -42,15 +47,13 @@ const InvestmentOptions = () => {
                     />
                   </div>
                   <div
-                    className={`-mt-6 h-18 rounded-full bg-black flex items-center justify-center text-[10px] tracking-[0.2em] text-white uppercase px-2 ${
-                      product.id === 'gold-1kg'
-                        ? 'w-56 text-center'
-                        : 'w-56'
-                    }`}
+                    className={`-mt-6 w-56 h-18 rounded-full bg-black flex items-center justify-center text-[10px] tracking-[0.2em] text-white uppercase px-2 text-center`}
                   >
                     {product.name}
                   </div>
                 </motion.div>
+              </Link>
+                
               ))}
             </div>
           </motion.div>

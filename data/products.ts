@@ -20,7 +20,7 @@ export const products: Product[] = [
   // ================= GOLD =================
   {
     id: 'gold-1kg-995',
-    name: '1KG.  995. Gold KILO BAR',
+    name: '1KG.  995. Gold Kilo Bar',
     weightLabel: '1 KILOGRAM',
     images: ['/images/products/1kg_gold_995.png'],
     specs: {
@@ -48,7 +48,7 @@ export const products: Product[] = [
   },
   {
     id: 'gold-1kg-9999',
-    name: '1KG.  999.90. Gold KILO BAR',
+    name: '1KG.  999.90. Gold Kilo Bar',
     weightLabel: '1 KILOGRAM',
     images: [
       '/images/products/1kg_gold_999_9.png',
@@ -114,7 +114,7 @@ export const products: Product[] = [
   // ================= SILVER =================
   {
     id: 'silver-1kg-bar',
-    name: '1 KG SILVER 999. KILOBAR',
+    name: '1 KG SILVER 999. Kilo Bar',
     weightLabel: '1 KILOGRAM',
     images: [
       '/images/products/1kg_silver_999_.png',
