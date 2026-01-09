@@ -20,9 +20,9 @@ export const products: Product[] = [
   // ================= GOLD =================
   {
     id: 'gold-1kg-995',
-    name: '1KG.  995. Gold Kilo Bar',
+    name: '1KG.  995.0 Gold Kilo Bar',
     weightLabel: '1 KILOGRAM',
-    images: ['/images/products/1kg_gold_995.png'],
+    images: ['/images/products/1kg_gold_995_.png'],
     specs: {
       weight: '1 Kg',
       width: '51.35 mm',
@@ -34,9 +34,9 @@ export const products: Product[] = [
   },
   {
     id: 'gold-500g-995',
-    name: '500 gm 995  Gold Bar',
+    name: '500 gm 995.0  Gold Bar',
     weightLabel: '500 GRAM',
-    images: ['/images/products/500gm_gold_995_.png'],
+    images: ['/images/products/500g_gold_995.png'],
     specs: {
       weight: '500 gm',
       width: '39.30 mm',
@@ -48,10 +48,10 @@ export const products: Product[] = [
   },
   {
     id: 'gold-1kg-9999',
-    name: '1KG.  999.90. Gold Kilo Bar',
+    name: '1KG.  999.9 Gold Kilo Bar',
     weightLabel: '1 KILOGRAM',
     images: [
-      '/images/products/1kg_gold_999_9.png',
+      '/images/products/1kg_gold_999_9_.png',
       '/images/products/B0004677_1kg_999_9_gold.jpg',
     ],
     specs: {
@@ -65,10 +65,10 @@ export const products: Product[] = [
   },
   {
     id: 'gold-500g-9999',
-    name: '500 gm 999.90  Gold Bar',
+    name: '500 gm 999.9  Gold Bar',
     weightLabel: '500 GRAM',
     images: [
-      '/images/products/500g_999.9_gold.png',
+      '/images/products/500g_999_9_gold.png',
       '/images/products/A0021539_500g_999_9_gold.jpg',
     ],
     specs: {
@@ -82,10 +82,10 @@ export const products: Product[] = [
   },
   {
     id: 'gold-250g-9999',
-    name: '250 gm 999.90 Gold Bar',
+    name: '250 gm 999.9 Gold Bar',
     weightLabel: '250 GRAM',
     images: [
-      '/images/products/250g_gold_999.png',
+      '/images/products/250g_gold_999_9.png',
       '/images/products/H0000011_250g_999_9_gold.jpg',
     ],
     specs: {
@@ -99,9 +99,9 @@ export const products: Product[] = [
   },
   {
     id: 'gold-tt-116g',
-    name: '116.64  gm. 999. Gold TT BAR',
+    name: '116.64 gm 999.0 Gold TT BAR',
     weightLabel: '116.64 GRAM',
-    images: ['/images/products/10_tola_Gold_999.png'],
+    images: ['/images/products/10_tola_Gold_999_0.png'],
     specs: {
       weight: '116 gm',
       width: '41.92 mm',
@@ -114,10 +114,10 @@ export const products: Product[] = [
   // ================= SILVER =================
   {
     id: 'silver-1kg-bar',
-    name: '1 KG SILVER 999. Kilo Bar',
+    name: '1 KG SILVER 999 Kilo Bar',
     weightLabel: '1 KILOGRAM',
     images: [
-      '/images/products/1kg_silver_999_.png',
+      '/images/products/1kg_silver_999.png',
       '/images/products/D0006532_1kg_999_silver.jpg',
     ],
     specs: {
@@ -131,10 +131,10 @@ export const products: Product[] = [
   },
   {
     id: 'silver-500g-bar',
-    name: '500  GM SILVER 999. SILVER BAR',
+    name: '500  GM SILVER 999.0 SILVER BAR',
     weightLabel: '500 GRAM',
     images: [
-      '/images/products/500g_silver_999.png',
+      '/images/products/500g_silver_999_.png',
       '/images/products/E500230_500g_999_silver.jpg',
     ],
     specs: {
@@ -148,10 +148,10 @@ export const products: Product[] = [
   },
   {
     id: 'silver-250g-bar',
-    name: '250 GM SILVER 999. SILVER BAR',
+    name: '250 GM SILVER 999.0 SILVER BAR',
     weightLabel: '250 GRAM',
     images: [
-      '/images/products/250g_silver_999.png',
+      '/images/products/250g_silver_999_.png',
       '/images/products/F000022_250g_999_silver.jpg',
     ],
     specs: {
@@ -167,7 +167,7 @@ export const products: Product[] = [
     id: 'silver-grains-1kg',
     name: '1 KILO SILVER 999 GRAINS',
     weightLabel: '1 KILOGRAM',
-    images: ['/images/products/1kg_silver grains_999.png'],
+    images: ['/images/products/1kg_silver_grains_999.png'],
     specs: {
       weight: '1 Kg',
       width: '-',
@@ -181,11 +181,11 @@ export const products: Product[] = [
   // ================= LAB SILVER GRAINS =================
   {
     id: 'silver-grains-lab',
-    name: '250 gm Silver Grains 999.9 for Fire assay Lab analysis',
+    name: '250 gm Silver Grains 999.9 for Fire Assay Lab Analysis',
     weightLabel: '250 GRAM',
     images: [
-      '/images/products/Silver Grains 999.90 for Fire assay Lab analysis.png',
       '/images/products/Silver Grains 999.90 for Fire assay Lab analysis_2.png',
+      '/images/products/Silver Grains 999.90 for Fire assay Lab analysis.png',
     ],
     specs: {
       weight: '250 gm',

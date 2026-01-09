@@ -91,7 +91,7 @@ export default function GalleryPage() {
 
           {/* Main Gallery Image */}
           <div className="mb-16 flex justify-center">
-            <div className="relative w-full max-w-4xl h-[350px] md:h-[450px] rounded-lg overflow-hidden shadow-lg bg-gray-100">
+            <div className="relative w-full max-w-4xl h-[450px] md:h-[560px] rounded-lg overflow-hidden shadow-lg bg-gray-100">
               <AnimatePresence mode="wait" initial={false}>
                 <motion.div
                   key={galleryImages[selectedImage]?.src}

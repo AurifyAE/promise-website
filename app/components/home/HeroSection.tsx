@@ -101,7 +101,7 @@ export default function HeroSection() {
                     whileHover={{ scale: 1.1 }}
                     transition={{ duration: 0.3 }}
                 >
-                    <ArrowRight className="h-5 w-5 -rotate-45" />
+                    <ArrowRight className="h-5 w-5 -rotate-45 text-[#ECC273]" />
                 </motion.div>
                 <span className="whitespace-nowrap px-6 text-sm text-white md:text-base">
                     REQUEST FOR QUOTE

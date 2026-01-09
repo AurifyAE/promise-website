@@ -24,23 +24,24 @@ export default function ProductsPage() {
             </p>
           </section>
 
-          <section className="flex flex-wrap justify-center gap-10">
+          <section className="flex flex-wrap items-baseline justify-center gap-10">
             {products.map((product) => (
               <Link
                 key={product.id}
                 href={`/products/${product.id}`}
                 className="group flex flex-col items-center"
               >
-                <div className="relative h-64 w-40 flex items-end justify-center">
+                <div className="relative w-40 flex items-end justify-center">
                   <Image
                     src={product.images[0]}
                     alt={product.name}
-                    fill
+                    width={160}
+                    height={300}
                     className="object-contain drop-shadow-xl transition-transform duration-300 group-hover:-translate-y-1"
                   />
                 </div>
                 <div className="-mt-6 h-18 w-56 rounded-full bg-black flex items-center justify-center text-[10px] tracking-[0.18em] text-white text-center uppercase px-2">
-                  {product.name}
+                  {product.name.replace(/GOLD KILO BAR|GOLD BAR|SILVER BAR|KILOBAR|KILO BAR| GOLD TT BAR|for Fire assay Lab analysis/gi, "").trim()}
                 </div>
               </Link>
             ))}

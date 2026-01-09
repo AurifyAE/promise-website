@@ -33,8 +33,8 @@ export default function ProductDetailPage({
       <main className="pt-24 md:pt-32 pb-20">
         <div className="container mx-auto px-4 md:px-8">
           {/* Top row: product variants + copy */}
-          <section className="mb-32">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
+          <section className="relative mb-32">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
               {/* Variant row */}
               <motion.div
                 initial={{ opacity: 0, x: -30 }}
@@ -44,9 +44,9 @@ export default function ProductDetailPage({
                   duration: 0.6,
                   ease: [0.16, 1, 0.3, 1],
                 }}
-                className="overflow-x-auto pb-4 scrollbar-hide"
+                className="overflow-x-auto pb-4 scrollbar-hide p-8 border-2 rounded-[40px]"
               >
-                <div className="flex gap-2 min-w-max">
+                <div className="flex items-baseline gap-2 min-w-max">
                   {products.map((product, index) => {
                     const isActive = product.id === id;
                     return (
@@ -65,19 +65,20 @@ export default function ProductDetailPage({
                           href={`/products/${product.id}`}
                           className="group flex flex-col items-center"
                         >
-                          <div className="relative h-48 w-32 md:h-56 md:w-40 flex items-end justify-center">
+                          <div className="relative w-32 md:w-40 flex items-end justify-center">
                             <Image
                               src={product.images[0]}
                               alt={product.name}
-                              fill
+                              width={160}
+                              height={300}
                               className="object-contain z-1 drop-shadow-xl transition-transform duration-300 group-hover:-translate-y-1"
                             />
                           </div>
                           <div
-                            className={`-mt-4 h-14 w-52 rounded-full bg-black flex items-center justify-center text-[10px] tracking-[0.18em] text-white uppercase transition-all duration-300 ${
+                            className={`-mt-4 h-14 w-52 rounded-full  flex items-center justify-center text-[10px] tracking-[0.18em] text-white uppercase transition-all duration-300 ${
                               isActive
-                                ? "opacity-100 translate-y-0"
-                                : "opacity-70 group-hover:opacity-100 group-hover:-translate-y-0.5"
+                                ? "bg-[#294734]/85 translate-y-0"
+                                : "bg-black group-hover:opacity-100 group-hover:-translate-y-0.5"
                             }`}
                           >
                             {product.name.replace(/GOLD KILO BAR|GOLD BAR|SILVER BAR|KILOBAR|KILO BAR| GOLD TT BAR|for Fire assay Lab analysis/gi, "").trim()}
@@ -125,15 +126,40 @@ export default function ProductDetailPage({
                   }}
                   className="text-sm md:text-base text-gray-700 leading-relaxed max-w-md"
                 >
-                  High‑purity 24K gold bars for investment, trading, and
+                  High-purity 24K gold bars for investment, trading, and
                   jewellery. Available in multiple weights from 250g to 1kg, all
                   stamped with unique serial numbers and accompanied by an assay
                   certificate.
                 </motion.p>
               </motion.div>
             </div>
-          </section>
 
+            <div className="absolute top-73 right-60">
+            <svg
+              width="800"
+              height="600"
+              viewBox="-300 0 1100 600"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="
+                  M 300 50
+                  H 520
+                  Q 550 50 550 80
+                  V 150
+                  Q 550 180 520 180
+                  H -220
+                  Q -260 180 -260 210
+                  V 260
+                "
+                stroke="grey"
+                strokeWidth="2"
+                fill="none"
+              />
+            </svg>
+            </div>
+          </section>
           {/* Detail card section */}
           <section>
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-10 items-start">
@@ -149,7 +175,7 @@ export default function ProductDetailPage({
                 className="flex flex-col items-center col-span-1"
               >
                 {/* MAIN IMAGE */}
-                <div className="relative h-80 w-56 md:h-80 md:w-56 flex items-end justify-center">
+                <div className="relative h-80 w-80 flex items-end justify-center">
                   <motion.div
                     key={activeImage}
                     initial={{ opacity: 0, scale: 0.95 }}
@@ -179,7 +205,7 @@ export default function ProductDetailPage({
                   }}
                   className="mt-6 h-16 w-56 rounded-full bg-black flex items-center justify-center text-[10px] tracking-[0.2em] text-white uppercase"
                 >
-                  {current.name.toUpperCase()}
+                  {current.name.toUpperCase().replace(/for Fire assay Lab analysis/gi, "").trim()}
                 </motion.div>
 
                 {/* THUMBNAILS */}
@@ -206,11 +232,7 @@ export default function ProductDetailPage({
                     ))}
                   </div>
                 )}
-
-
-                
               </motion.div>
-
 
               {/* Specs card */}
               <motion.div
@@ -235,7 +257,7 @@ export default function ProductDetailPage({
                         delay: 0.3,
                         ease: [0.16, 1, 0.3, 1],
                       }}
-                      className="text-2xl md:text-3xl font-semibold text-black"
+                      className="w-[40vw] text-2xl md:text-3xl font-semibold text-black"
                     >
                       {current.name}
                     </motion.h2>

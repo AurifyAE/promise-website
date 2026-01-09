@@ -51,12 +51,12 @@ export default function Navbar() {
           <div className="absolute inset-x-0 flex justify-center pointer-events-none md:pointer-events-auto md:static">
             <Link href="/" onClick={close} className="pointer-events-auto">
               <Image
-                src="/images/home/logo.svg"
+                src="/images/home/promise-refinery-logo.svg"
                 alt="Promise Gold Refinery"
                 width={190}
                 height={48}
                 priority
-                className="h-11 w-auto md:h-12"
+                className="h-24 w-auto md:h-32"
               />
             </Link>
           </div>
@@ -123,7 +123,7 @@ export default function Navbar() {
           {/* Sidebar Header */}
           <div className="flex items-center justify-between p-8 border-b border-[#333]">
             <Image
-              src="/images/home/logo.svg"
+              src="/images/home/promise-refinery-logo.svg"
               alt="Logo"
               width={160}
               height={42}
