@@ -72,11 +72,11 @@ export default function ProductDetailPage({
                           href={`/products/${product.id}`}
                           className="group flex flex-col items-center"
                         >
-                          <div className="relative w-32 md:w-40 flex items-end justify-center">
+                          <div className="relative w-40 md:w-56 flex items-end justify-center">
                             <Image
                               src={product.images[0]}
                               alt={product.name}
-                              width={160}
+                              width={200}
                               height={1}
                               className={`object-contain z-1 drop-shadow-xl transition-transform duration-300 group-hover:-translate-y-1 ${heightMap[product.specs.weight]}`}
                             />

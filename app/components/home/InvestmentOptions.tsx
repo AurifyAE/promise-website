@@ -26,7 +26,7 @@ const InvestmentOptions = () => {
             viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 0.4, ease: "easeOut" }}
           >
-            <div className="flex items-baseline gap-10 min-w-max">
+            <div className="flex items-baseline gap-2 min-w-max">
               {products.map((product, index) => (
                       <Link
                       key={product.id}
@@ -45,11 +45,11 @@ const InvestmentOptions = () => {
                           ease: "easeOut"
                         }}
                       >
-                        <div className="relative w-40 flex items-end justify-center">
+                        <div className="relative w-56 flex items-end justify-center">
                           <Image
                             src={product.images[0]}
                             alt={product.name}
-                            width={160}
+                            width={200}
                             height={1}
                             className={`object-contain drop-shadow-xl transition-transform duration-300 group-hover:-translate-y-1 ${heightMap[product.specs.weight]}`}
                           />
