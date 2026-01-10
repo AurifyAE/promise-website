@@ -3,7 +3,8 @@
 import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
+import { animate } from "framer-motion";
 import { products } from "@/data/products";
 import Navbar from "@/app/components/Navbar";
 import Footer from "@/app/components/Footer";
@@ -19,19 +20,47 @@ const heightMap: Record<string, string> = {
 };
 
 
-export default function ProductDetailPage({
-  params,
-}: {
-  params: Promise<{ id: string }>;
-}) {
-  const { id } = use(params);
-  const current = products.find((p) => p.id === id) ?? products[0];
+export default function ProductDetailPage() {
+  const [activeProductId, setActiveProductId] = useState(products[0].id);
+  const current = products.find((p) => p.id === activeProductId) ?? products[0];
   const specs = current.specs;
   const [activeImage, setActiveImage] = useState(0);
+  const variantContainerRef = useRef<HTMLDivElement | null>(null);
+  const itemRefs = useRef<Record<string, HTMLDivElement | null>>({});
+
+  useEffect(() => {
+    const container = variantContainerRef.current;
+    const target = itemRefs.current[activeProductId];
+  
+    if (!container || !target) return;
+  
+    const containerRect = container.getBoundingClientRect();
+    const targetRect = target.getBoundingClientRect();
+  
+    const start = container.scrollLeft;
+    const targetScroll =
+      start +
+      (targetRect.left - containerRect.left) -
+      containerRect.width / 2 +
+      targetRect.width / 2;
+  
+    const controls = animate(start, targetScroll, {
+      duration: 1.8,
+      ease: [0.22, 1, 0.36, 1],
+      onUpdate: (latest) => {
+        container.scrollLeft = latest;
+      },
+    });
+  
+    return () => controls.stop();
+  }, [activeProductId]);
+  
+  
 
   useEffect(() => {
     setActiveImage(0);
-  }, [id]);
+  }, [activeProductId]); 
+
 
   return (
     <div className="min-h-screen bg-white">
@@ -46,54 +75,78 @@ export default function ProductDetailPage({
               <motion.div
                 initial={{ opacity: 0, x: -30 }}
                 whileInView={{ opacity: 1, x: 0 }}
+                ref={variantContainerRef}
                 viewport={{ once: true, margin: "-50px" }}
                 transition={{
                   duration: 0.6,
                   ease: [0.16, 1, 0.3, 1],
                 }}
                 className="overflow-x-auto pb-4 scrollbar-hide p-8 border-2 border-amber-100 rounded-[40px]"
+                
               >
-                <div className="flex items-baseline gap-2 min-w-max">
-                  {products.map((product, index) => {
-                    const isActive = product.id === id;
-                    return (
-                      <motion.div
-                        key={product.id}
-                        initial={{ opacity: 0, y: 20 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        viewport={{ once: true }}
-                        transition={{
-                          duration: 0.4,
-                          delay: index * 0.1,
-                          ease: [0.16, 1, 0.3, 1],
-                        }}
+                <div className="flex items-end gap-6 px-6 min-w-max snap-x snap-mandatory">
+                {products.map((product, index) => {
+                  const isActive = product.id === activeProductId;
+
+                  return (
+                    <motion.div
+                      key={product.id}
+                      ref={(el) => (itemRefs.current[product.id] = el)}
+                      className="shrink-0 w-[180px] md:w-[220px]"
+                      initial={{ opacity: 0, y: 20 }}
+                      whileInView={{ opacity: 1, y: 0 }}
+                      viewport={{ once: true }}
+                      transition={{
+                        duration: 0.4,
+                        delay: index * 0.08,
+                        ease: [0.16, 1, 0.3, 1],
+                      }}
+                    >
+                      <button
+                        type="button"
+                        onClick={() => setActiveProductId(product.id)}
+                        className="group flex flex-col items-center focus:outline-none"
                       >
-                        <Link
-                          href={`/products/${product.id}`}
-                          className="group flex flex-col items-center"
-                        >
-                          <div className="relative w-40 md:w-56 flex items-end justify-center">
-                            <Image
-                              src={product.images[0]}
-                              alt={product.name}
-                              width={200}
-                              height={1}
-                              className={`object-contain z-1 drop-shadow-xl transition-transform duration-300 group-hover:-translate-y-1 ${heightMap[product.specs.weight]}`}
-                            />
-                          </div>
-                          <div
-                            className={`-mt-4 h-14 w-52 rounded-full  flex items-center justify-center text-[10px] tracking-[0.18em] text-white uppercase transition-all duration-300 ${
+                        {/* PRODUCT IMAGE */}
+                        <div className="relative w-full flex items-end justify-center">
+                          <Image
+                            src={product.images[0]}
+                            alt={product.name}
+                            width={200}
+                            height={1}
+                            className={`
+                              object-contain drop-shadow-xl transition-transform duration-300
+                              group-hover:-translate-y-1
+                              ${heightMap[product.specs.weight] ?? ""}
+                            `}
+                          />
+                        </div>
+
+                        {/* LABEL */}
+                        <div
+                          className={`
+                            -mt-4 h-14 w-full rounded-full
+                            flex items-center justify-center
+                            text-[10px] tracking-[0.18em] uppercase
+                            transition-all duration-300
+                            ${
                               isActive
-                                ? "bg-[#294734] translate-y-0"
-                                : "bg-black group-hover:opacity-100 group-hover:-translate-y-0.5"
-                            }`}
-                          >
-                            {product.name.replace(/GOLD KILO BAR|GOLD BAR|SILVER BAR|KILOBAR|KILO BAR| GOLD TT BAR|for Fire assay Lab analysis/gi, "").trim()}
-                          </div>
-                        </Link>
-                      </motion.div>
-                    );
-                  })}
+                                ? "bg-[#294734] text-white"
+                                : "bg-black text-white/80"
+                            }
+                          `}
+                        >
+                          {product.name
+                            .replace(
+                              /GOLD KILO BAR|GOLD BAR|SILVER BAR|KILOBAR|KILO BAR| GOLD TT BAR|for Fire assay Lab analysis/gi,
+                              ""
+                            )
+                            .trim()}
+                        </div>
+                      </button>
+                    </motion.div>
+                  );
+                })}
                 </div>
               </motion.div>
 
