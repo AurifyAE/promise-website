@@ -146,11 +146,11 @@ export default function GalleryPage() {
               transition={{ type: "spring", stiffness: 300, damping: 18 }}
             >
               <svg
-                className="w-6 h-6 md:w-7 md:h-7 text-[#A97C50]"
+                className="w-6 h-6 md:w-7 md:h-7 text-[#A97C50]/75"
                 fill="none"
                 strokeLinecap="round"
                 strokeLinejoin="round"
-                strokeWidth="3"
+                strokeWidth="2"
                 viewBox="0 0 24 24"
                 stroke="currentColor"
               >
@@ -171,7 +171,7 @@ export default function GalleryPage() {
                     onClick={() => handleSelectImage(index)}
                     className={`relative w-32 h-32 md:w-40 md:h-40 rounded-lg overflow-hidden shrink-0 transition-all duration-300 ${
                       selectedImage === index
-                        ? 'ring-4 ring-[#A97C50] scale-102'
+                        ? 'ring-2 ring-[#A97C50]/75 scale-102'
                         : 'hover:scale-105 opacity-80 hover:opacity-100'
                     }`}
                     initial={{ opacity: 0, y: 30 }}
@@ -203,11 +203,11 @@ export default function GalleryPage() {
               transition={{ type: "spring", stiffness: 300, damping: 18 }}
             >
               <svg
-                className="w-6 h-6 md:w-7 md:h-7 text-[#A97C50]"
+                className="w-6 h-6 md:w-7 md:h-7 text-[#A97C50]/75"
                 fill="none"
                 strokeLinecap="round"
                 strokeLinejoin="round"
-                strokeWidth="3"
+                strokeWidth="2"
                 viewBox="0 0 24 24"
                 stroke="currentColor"
               >

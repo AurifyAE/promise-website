@@ -11,6 +11,13 @@ import { use } from "react";
 import Contact from "@/app/components/Contact";
 import Testimonials from "@/app/components/Testimonials";
 
+const heightMap: Record<string, string> = {
+  "1 Kg": "max-h-[360px]",
+  "500 gm": "max-h-[300px]",
+  "250 gm": "max-h-[220px]",
+  "116 gm": "max-h-[180px]"
+};
+
 
 export default function ProductDetailPage({
   params,
@@ -70,8 +77,8 @@ export default function ProductDetailPage({
                               src={product.images[0]}
                               alt={product.name}
                               width={160}
-                              height={300}
-                              className="object-contain z-1 drop-shadow-xl transition-transform duration-300 group-hover:-translate-y-1"
+                              height={1}
+                              className={`object-contain z-1 drop-shadow-xl transition-transform duration-300 group-hover:-translate-y-1 ${heightMap[product.specs.weight]}`}
                             />
                           </div>
                           <div

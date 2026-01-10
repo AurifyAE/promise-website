@@ -6,6 +6,13 @@ import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import { products } from "@/data/products";
 
+const heightMap: Record<string, string> = {
+  "1 Kg": "max-h-[360px]",
+  "500 gm": "max-h-[300px]",
+  "250 gm": "max-h-[220px]",
+  "116 gm": "max-h-[180px]"
+};
+
 export default function ProductsPage() {
   return (
     <div className="min-h-screen bg-white">
@@ -36,8 +43,9 @@ export default function ProductsPage() {
                     src={product.images[0]}
                     alt={product.name}
                     width={160}
-                    height={300}
-                    className="object-contain drop-shadow-xl transition-transform duration-300 group-hover:-translate-y-1"
+                    height={1}
+                    className={`object-contain drop-shadow-xl transition-transform duration-300 group-hover:-translate-y-1 ${heightMap[product.specs.weight]}`}
+                    
                   />
                 </div>
                 <div className="-mt-6 h-18 w-56 rounded-full bg-black flex items-center justify-center text-[10px] tracking-[0.18em] text-white text-center uppercase px-2">

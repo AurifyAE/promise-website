@@ -6,6 +6,13 @@ import { ArrowRight } from 'lucide-react';
 import { products } from '@/data/products';
 import Link from 'next/link';
 
+const heightMap: Record<string, string> = {
+  "1 Kg": "max-h-[360px]",
+  "500 gm": "max-h-[300px]",
+  "250 gm": "max-h-[220px]",
+  "116 gm": "max-h-[180px]"
+};
+
 const InvestmentOptions = () => {
   return (
     <section className="py-20 bg-white">
@@ -38,17 +45,17 @@ const InvestmentOptions = () => {
                     ease: "easeOut"
                   }}
                 >
-                  <div className="relative w-56 flex items-end justify-center">
+                  <div className="relative w-40 flex items-end justify-center">
                     <Image
                       src={product.images[0]}
                       alt={product.name}
                       width={160}
-                      height={300}
-                      className="object-contain drop-shadow-xl"
+                      height={1}
+                      className={`object-contain drop-shadow-xl transition-transform duration-300 group-hover:-translate-y-1 ${heightMap[product.specs.weight]}`}
                     />
                   </div>
                   <div
-                    className={`-mt-6 w-56 h-18 rounded-full bg-black flex items-center justify-center text-[10px] tracking-[0.2em] text-white uppercase px-2 text-center`}
+                    className={`-mt-5 w-52 h-18 rounded-full bg-black flex items-center justify-center text-[10px] tracking-[0.2em] text-white uppercase px-2 text-center`}
                   >
                     {product.name.replace(/GOLD KILO BAR|GOLD BAR|SILVER BAR|KILOBAR|KILO BAR| GOLD TT BAR|for Fire assay Lab analysis/gi, "").trim()}
                   </div>
