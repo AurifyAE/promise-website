@@ -7,7 +7,7 @@ import { products } from '@/data/products';
 import Link from 'next/link';
 
 const heightMap: Record<string, string> = {
-  "1 Kg": "max-h-[360px]",
+  "1 Kg": "max-h-[380px]",
   "500 gm": "max-h-[300px]",
   "250 gm": "max-h-[220px]",
   "116 gm": "max-h-[180px]"
@@ -24,45 +24,44 @@ const InvestmentOptions = () => {
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true, margin: "-100px" }}
-            transition={{ duration: 0.8, ease: "easeOut" }}
+            transition={{ duration: 0.4, ease: "easeOut" }}
           >
             <div className="flex items-baseline gap-10 min-w-max">
               {products.map((product, index) => (
-                <Link
-                key={product.id}
-                href={`/products/${product.id}`}
-                className="group flex flex-col items-center "
-              >
-                <motion.div
-                  key={product.id}
-                  className="flex flex-col items-center"
-                  initial={{ opacity: 0, y: 50 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ 
-                    duration: 1, 
-                    delay: index * 0.30,
-                    ease: "easeOut"
-                  }}
-                >
-                  <div className="relative w-40 flex items-end justify-center">
-                    <Image
-                      src={product.images[0]}
-                      alt={product.name}
-                      width={160}
-                      height={1}
-                      className={`object-contain drop-shadow-xl transition-transform duration-300 group-hover:-translate-y-1 ${heightMap[product.specs.weight]}`}
-                    />
-                  </div>
-                  <div
-                    className={`-mt-5 w-52 h-18 rounded-full bg-black flex items-center justify-center text-[10px] tracking-[0.2em] text-white uppercase px-2 text-center`}
-                  >
-                    {product.name.replace(/GOLD KILO BAR|GOLD BAR|SILVER BAR|KILOBAR|KILO BAR| GOLD TT BAR|for Fire assay Lab analysis/gi, "").trim()}
-                  </div>
-                </motion.div>
-              </Link>
-                
-              ))}
+                      <Link
+                      key={product.id}
+                      href={`/products/${product.id}`}
+                      className="group flex flex-col items-center "
+                    >
+                      <motion.div
+                        key={product.id}
+                        className="flex flex-col items-center"
+                        initial={{ opacity: 0, y: 50 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ 
+                          duration: 1, 
+                          delay: index * 0.30,
+                          ease: "easeOut"
+                        }}
+                      >
+                        <div className="relative w-40 flex items-end justify-center">
+                          <Image
+                            src={product.images[0]}
+                            alt={product.name}
+                            width={160}
+                            height={1}
+                            className={`object-contain drop-shadow-xl transition-transform duration-300 group-hover:-translate-y-1 ${heightMap[product.specs.weight]}`}
+                          />
+                        </div>
+                        <div
+                          className={`-mt-5 w-52 h-18 rounded-full bg-black flex items-center justify-center text-[10px] tracking-[0.2em] text-white uppercase px-2 text-center`}
+                        >
+                          {product.name.replace(/GOLD KILO BAR|GOLD BAR|SILVER BAR|KILOBAR|KILO BAR| GOLD TT BAR|for Fire assay Lab analysis/gi, "").trim()}
+                        </div>
+                      </motion.div>
+                    </Link> 
+                    ))}
             </div>
           </motion.div>
 

@@ -53,10 +53,10 @@ export default function Navbar() {
               <Image
                 src="/images/home/promise-refinery-logo.svg"
                 alt="Promise Gold Refinery"
-                width={190}
-                height={48}
+                width={200}
+                height={36}
                 priority
-                className="h-24 w-auto md:h-32"
+                className="h-24 w-auto md:h-36"
               />
             </Link>
           </div>

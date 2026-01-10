@@ -131,7 +131,7 @@ export const products: Product[] = [
   },
   {
     id: 'silver-500g-bar',
-    name: '500  GM SILVER 999.0 SILVER BAR',
+    name: '500 GM SILVER 999.0 SILVER BAR',
     weightLabel: '500 GRAM',
     images: [
       '/images/products/500g_silver_999_.png',
@@ -165,7 +165,7 @@ export const products: Product[] = [
   },
   {
     id: 'silver-grains-1kg',
-    name: '1 KILO SILVER 999 GRAINS',
+    name: '1 KILO SILVER GRAINS 999',
     weightLabel: '1 KILOGRAM',
     images: ['/images/products/1kg_silver_grains_999.png'],
     specs: {
@@ -184,7 +184,7 @@ export const products: Product[] = [
     name: '250 gm Silver Grains 999.9 for Fire Assay Lab Analysis',
     weightLabel: '250 GRAM',
     images: [
-      '/images/products/Silver Grains 999.90 for Fire assay Lab analysis_2.png',
+      '/images/products/silver_grains_250gm.png',
       '/images/products/Silver Grains 999.90 for Fire assay Lab analysis.png',
     ],
     specs: {

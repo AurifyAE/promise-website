@@ -51,7 +51,7 @@ export default function ProductDetailPage({
                   duration: 0.6,
                   ease: [0.16, 1, 0.3, 1],
                 }}
-                className="overflow-x-auto pb-4 scrollbar-hide p-8 border-2 rounded-[40px]"
+                className="overflow-x-auto pb-4 scrollbar-hide p-8 border-2 border-amber-100 rounded-[40px]"
               >
                 <div className="flex items-baseline gap-2 min-w-max">
                   {products.map((product, index) => {
@@ -84,7 +84,7 @@ export default function ProductDetailPage({
                           <div
                             className={`-mt-4 h-14 w-52 rounded-full  flex items-center justify-center text-[10px] tracking-[0.18em] text-white uppercase transition-all duration-300 ${
                               isActive
-                                ? "bg-[#294734]/85 translate-y-0"
+                                ? "bg-[#294734] translate-y-0"
                                 : "bg-black group-hover:opacity-100 group-hover:-translate-y-0.5"
                             }`}
                           >
@@ -279,7 +279,7 @@ export default function ProductDetailPage({
                         delay: 0.4,
                         ease: [0.16, 1, 0.3, 1],
                       }}
-                      className="rounded-full bg-[#1F6B3C] px-6 py-3 text-xs md:text-sm font-semibold text-white shadow-md hover:bg-[#175131] transition-colors"
+                      className="rounded-full bg-[#175131] w-52 px-6 py-3 text-xs md:text-sm font-semibold text-white shadow-md hover:bg-[#1F6B3C] transition-colors"
                     >
                       ENQUIRE NOW →
                     </motion.button>
