@@ -80,7 +80,7 @@ export default function ProductDetailPage() {
                   duration: 0.6,
                   ease: [0.16, 1, 0.3, 1],
                 }}
-                className="overflow-x-auto pb-4 scrollbar-hide py-4 md:p-8 border-2 border-amber-100 rounded-[40px]"
+                className="overflow-x-auto pb-4 scrollbar-hide py-4 md:p-8 border-2 border-amber-100 rounded-[40px] z-1"
                 
               >
                 <div className="flex items-end gap-6 px-6 min-w-max snap-x snap-mandatory">
@@ -106,7 +106,7 @@ export default function ProductDetailPage() {
                       <button
                         type="button"
                         onClick={() => setActiveProductId(product.id)}
-                        className="group flex flex-col items-center focus:outline-none"
+                        className="group flex flex-col items-center focus:outline-none cursor-pointer"
                       >
                         {/* PRODUCT IMAGE */}
                         <div className="relative w-full flex items-end justify-center">
@@ -195,30 +195,30 @@ export default function ProductDetailPage() {
               </motion.div>
             </div>
 
-            <div className="hidden md:block absolute top-73 right-60">
-            <svg
-              width="800"
-              height="600"
-              viewBox="-300 0 1100 600"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="
-                  M 300 50
-                  H 520
-                  Q 550 50 550 80
-                  V 150
-                  Q 550 180 520 180
-                  H -220
-                  Q -260 180 -260 210
-                  V 260
-                "
-                stroke="grey"
-                strokeWidth="2"
+            <div className="hidden md:block absolute top-90 right-93">
+              <svg
+                width="660"
+                height="250"
+                viewBox="-265 40 820 240"
                 fill="none"
-              />
-            </svg>
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="
+                    M 300 50
+                    H 520
+                    Q 550 50 550 80
+                    V 150
+                    Q 550 180 520 180
+                    H -220
+                    Q -260 180 -260 210
+                    V 260
+                  "
+                  stroke="grey"
+                  strokeWidth="2"
+                  fill="none"
+                />
+              </svg>
             </div>
           </section>
           {/* Detail card section */}
