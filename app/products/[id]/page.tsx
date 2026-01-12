@@ -8,7 +8,6 @@ import { animate } from "framer-motion";
 import { products } from "@/data/products";
 import Navbar from "@/app/components/Navbar";
 import Footer from "@/app/components/Footer";
-import { use } from "react";
 import Contact from "@/app/components/Contact";
 import Testimonials from "@/app/components/Testimonials";
 
@@ -67,9 +66,9 @@ export default function ProductDetailPage() {
       <Navbar />
 
       <main className="pt-24 md:pt-32 pb-20">
-        <div className="container mx-auto px-4 md:px-8">
+        <div className="container mx-auto px-4 md:px-8 flex flex-col">
           {/* Top row: product variants + copy */}
-          <section className="relative mb-32">
+          <section className="relative mb-32 order-2 md:order-1">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
               {/* Variant row */}
               <motion.div
@@ -81,7 +80,7 @@ export default function ProductDetailPage() {
                   duration: 0.6,
                   ease: [0.16, 1, 0.3, 1],
                 }}
-                className="overflow-x-auto pb-4 scrollbar-hide p-8 border-2 border-amber-100 rounded-[40px]"
+                className="overflow-x-auto pb-4 scrollbar-hide py-4 md:p-8 border-2 border-amber-100 rounded-[40px]"
                 
               >
                 <div className="flex items-end gap-6 px-6 min-w-max snap-x snap-mandatory">
@@ -91,7 +90,9 @@ export default function ProductDetailPage() {
                   return (
                     <motion.div
                       key={product.id}
-                      ref={(el) => (itemRefs.current[product.id] = el)}
+                      ref={(el) => {
+                        itemRefs.current[product.id] = el
+                      }}
                       className="shrink-0 w-[180px] md:w-[220px]"
                       initial={{ opacity: 0, y: 20 }}
                       whileInView={{ opacity: 1, y: 0 }}
@@ -194,7 +195,7 @@ export default function ProductDetailPage() {
               </motion.div>
             </div>
 
-            <div className="absolute top-73 right-60">
+            <div className="hidden md:block absolute top-73 right-60">
             <svg
               width="800"
               height="600"
@@ -221,7 +222,7 @@ export default function ProductDetailPage() {
             </div>
           </section>
           {/* Detail card section */}
-          <section>
+          <section className="order-1 md:order-2">
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-10 items-start">
               {/* Large product image */}
               <motion.div
@@ -307,7 +308,7 @@ export default function ProductDetailPage() {
                 className="relative w-full col-span-2"
               >
                 <div className="relative rounded-3xl bg-white shadow-[0_18px_45px_rgba(0,0,0,0.08)] border border-gray-100 overflow-hidden">
-                  <div className="flex items-center justify-between px-8 pt-8 pb-4">
+                  <div className="flex flex-col md:flex-row md:items-center justify-between px-8 pt-8 pb-4 gap-4">
                     <motion.h2
                       initial={{ opacity: 0, y: 20 }}
                       whileInView={{ opacity: 1, y: 0 }}
@@ -317,7 +318,7 @@ export default function ProductDetailPage() {
                         delay: 0.3,
                         ease: [0.16, 1, 0.3, 1],
                       }}
-                      className="w-[40vw] text-2xl md:text-3xl font-semibold text-black"
+                      className="md:w-[40vw] text-2xl md:text-3xl text-pretty font-semibold text-black"
                     >
                       {current.name}
                     </motion.h2>
