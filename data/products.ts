@@ -22,7 +22,10 @@ export const products: Product[] = [
     id: 'gold-1kg-995',
     name: '1KG.  995.0 Gold Kilo Bar',
     weightLabel: '1 KILOGRAM',
-    images: ['/images/products/1kg_gold_995_.png'],
+    images: [ 
+      '/images/products/1kg_gold_995_.png',
+      '/images/products/A0021539_1kg_995_gold.jpeg'
+    ],
     specs: {
       weight: '1 Kg',
       width: '51.35 mm',
@@ -36,7 +39,10 @@ export const products: Product[] = [
     id: 'gold-500g-995',
     name: '500 gm 995.0  Gold Bar',
     weightLabel: '500 GRAM',
-    images: ['/images/products/500g_gold_995.png'],
+    images: [
+      '/images/products/500g_gold_995.png',
+      '/images/products/J0000005_500g_995_gold.jpeg'
+    ],
     specs: {
       weight: '500 gm',
       width: '39.30 mm',
@@ -52,7 +58,7 @@ export const products: Product[] = [
     weightLabel: '1 KILOGRAM',
     images: [
       '/images/products/1kg_gold_999_9_.png',
-      '/images/products/B0004677_1kg_999_9_gold.jpg',
+      '/images/products/B0004677_1kg_999_gold.jpeg',
     ],
     specs: {
       weight: '1 Kg',
@@ -69,7 +75,7 @@ export const products: Product[] = [
     weightLabel: '500 GRAM',
     images: [
       '/images/products/500g_999_9_gold.png',
-      '/images/products/A0021539_500g_999_9_gold.jpg',
+      '/images/products/G0000012_500g_999_gold.jpeg',
     ],
     specs: {
       weight: '500 gm',
@@ -86,7 +92,7 @@ export const products: Product[] = [
     weightLabel: '250 GRAM',
     images: [
       '/images/products/250g_gold_999_9.png',
-      '/images/products/H0000011_250g_999_9_gold.jpg',
+      '/images/products/H0000013_250g_999_gold.jpeg',
     ],
     specs: {
       weight: '250 gm',
@@ -118,7 +124,7 @@ export const products: Product[] = [
     weightLabel: '1 KILOGRAM',
     images: [
       '/images/products/1kg_silver_999.png',
-      '/images/products/D0006532_1kg_999_silver.jpg',
+      '/images/products/D0006532_1kg_999_silver.jpeg',
     ],
     specs: {
       weight: '1 Kg',
