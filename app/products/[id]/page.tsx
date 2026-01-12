@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { motion } from "framer-motion";
+import { motion, useScroll, useTransform } from "framer-motion";
 import { useState, useEffect, useRef } from "react";
 import { animate } from "framer-motion";
 import { products } from "@/data/products";
@@ -26,6 +26,16 @@ export default function ProductDetailPage() {
   const [activeImage, setActiveImage] = useState(0);
   const variantContainerRef = useRef<HTMLDivElement | null>(null);
   const itemRefs = useRef<Record<string, HTMLDivElement | null>>({});
+  const containerRef = useRef(null);
+
+  // Track scroll relative to this section
+  const { scrollYProgress } = useScroll({
+    target: containerRef,
+    offset: ["start center", "end center"],
+  });
+
+  // Map scroll → path length
+  const pathLength = useTransform(scrollYProgress, [0, 1], [0, 1]);
 
   useEffect(() => {
     const container = variantContainerRef.current;
@@ -80,7 +90,7 @@ export default function ProductDetailPage() {
                   duration: 0.6,
                   ease: [0.16, 1, 0.3, 1],
                 }}
-                className="overflow-x-auto pb-4 scrollbar-hide py-4 md:p-8 border-2 border-amber-100 rounded-[40px] z-1"
+                className="overflow-x-auto pb-4 scrollbar-hide py-4 md:p-8 border-2 border-[#ecc273a8] rounded-[40px] z-1"
                 
               >
                 <div className="flex items-end gap-6 px-6 min-w-max snap-x snap-mandatory">
@@ -195,30 +205,36 @@ export default function ProductDetailPage() {
               </motion.div>
             </div>
 
-            <div className="hidden md:block absolute top-90 right-93">
-              <svg
-                width="660"
-                height="250"
-                viewBox="-265 40 820 240"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
+            <div className="relative h-[5vh] hidden md:flex items-start">
+              <div
+                ref={containerRef}
+                className="absolute -top-20 right-93"
               >
-                <path
-                  d="
-                    M 300 50
-                    H 520
-                    Q 550 50 550 80
-                    V 150
-                    Q 550 180 520 180
-                    H -220
-                    Q -260 180 -260 210
-                    V 260
-                  "
-                  stroke="grey"
-                  strokeWidth="2"
+                      <svg
+                  width="660"
+                  height="250"
+                  viewBox="-265 40 820 240"
                   fill="none"
-                />
-              </svg>
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <motion.path
+                    d="
+                      M 300 50
+                      H 520
+                      Q 550 50 550 80
+                      V 150
+                      Q 550 180 520 180
+                      H -220
+                      Q -260 180 -260 210
+                      V 260
+                    "
+                    stroke="#848482"
+                    strokeWidth="2"
+                    fill="none"
+                    style={{ pathLength }}
+                  />
+                </svg>
+              </div>
             </div>
           </section>
           {/* Detail card section */}
