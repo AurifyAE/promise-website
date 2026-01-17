@@ -347,6 +347,7 @@ export default function Contact() {
                     value={phone}
                     onChange={setPhone}
                     enableSearch
+                    countryCodeEditable={false}
                     inputProps={{ required: true }}
                     containerClass="mt-1"
                     inputClass="!w-full !h-12 !text-base !bg-transparent !border-0 !border-b-2 !border-gray-300 !outline-none !ring-0 !pl-14 !pr-4 !text-black focus:!border-black transition-colors duration-300"
