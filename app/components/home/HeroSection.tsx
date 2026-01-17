@@ -2,6 +2,8 @@
 import { motion } from 'framer-motion';
 import { ArrowRight } from 'lucide-react';
 import Link from 'next/link';
+import Image from 'next/image';
+import whatsAppIcon from '../../../public/icons/whatsapp-yellow.svg'
 
 function AnimatedHeading({ text, delay = 0 }: { text: string; delay?: number }) {
     return (
@@ -73,40 +75,48 @@ export default function HeroSection() {
                     >
                         Sharjah's trusted gold and precious metals refinery, delivering world-class refining, assaying, recycling, and silver purification services with integrity and precision.
                     </motion.p>
-                    <motion.button
-                        initial={{ opacity: 0, y: 30 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        transition={{ delay: 2.8, duration: 0.8, ease: "easeOut" }}
-                        whileHover={{ scale: 1.05 }}
-                        whileTap={{ scale: 0.95 }}
-                        className="rounded-full bg-[#ECC273] px-6 py-3 text-sm md:text-base text-black transition-colors hover:bg-[#d4b28a] "
-                    >
-                        <Link href="/services" className='flex items-center justify-center gap-2'>
+                    <Link href="/services" className='inline-block'>
+                        <motion.button
+                            initial={{ opacity: 0, y: 30 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            transition={{ delay: 2.8, duration: 0.8, ease: "easeOut" }}
+                            whileTap={{ scale: 0.95 }}
+                            className="flex items-center justify-center gap-2 rounded-full bg-[#ECC273] px-6 py-3 text-sm md:text-base text-black transition-all hover:bg-[#d4b28a] hover:scale-105 duration-300 cursor-pointer"
+                        >
                             Explore Our Services <ArrowRight className="w-4 h-4" />
-                        </Link>
-                    </motion.button>
+                        </motion.button>
+                    </Link>
                 </motion.div>
             </div>
             {/* Fixed Quote Button */}
-
-            <motion.button
-                className="fixed bottom-8 right-8 z-50 flex h-16 items-center rounded-full bg-black/70 backdrop-blur-sm shadow-2xl md:h-16 overflow-hidden"
-                initial={{ width: 64 }}
+            <motion.a
+                href="https://wa.me/971505794931"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="fixed bottom-8 right-8 z-50 flex h-12 items-center rounded-full bg-black/70 backdrop-blur-sm shadow-2xl md:h-12 overflow-hidden"
+                initial={{ width: 48 }}
                 whileHover={{ width: "auto" }}
                 transition={{ type: "spring", stiffness: 200, damping: 20 }}
             >
                 {/* Arrow - always centered in initial state, moves slightly on hover */}
                 <motion.div
-                    className="flex h-16 w-16 shrink-0 items-center justify-center rounded-full bg-black/70"
+                    className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-black/70"
                     whileHover={{ scale: 1.1 }}
                     transition={{ duration: 0.3 }}
                 >
-                    <ArrowRight className="h-5 w-5 -rotate-45 text-[#ECC273]" />
+                    <Image
+                      src={whatsAppIcon}
+                      alt=""
+                      width={5}
+                      height={5}
+                      className={`h-5 w-5`}
+                      priority
+                    />
                 </motion.div>
-                <span className="whitespace-nowrap px-6 text-sm text-white md:text-base">
+                <span className="whitespace-nowrap px-6 text-sm text-white">
                     REQUEST FOR QUOTE
                 </span>
-            </motion.button>
+            </motion.a>
         </section>
     );
 }

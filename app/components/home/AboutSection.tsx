@@ -47,15 +47,15 @@ const AboutSection = () => {
                 >
                     Promise Gold Refinery is a state-of-the-art facility in Sharjah, UAE, offering high-purity gold and silver refining services to clients worldwide. We combine cutting-edge technology with responsible sourcing practices aligned with OECD guidelines — ensuring transparency, traceability, and sustainability in every process.
                 </motion.p>
-                <motion.button 
-                className="bg-[#EBDECF] hover:bg-[#D9C8B4] text-black py-3 px-8 rounded-full transition-colors duration-300"
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                >
-                    <Link href="" className="flex items-center justify-center gap-2">
+                <Link href="/about-us" className="">
+                    <motion.button 
+                    className="flex items-center justify-center gap-2 bg-[#EBDECF] hover:bg-[#D9C8B4] text-black py-3 px-8 rounded-full transition-colors duration-300 cursor-pointer"
+                    whileHover={{ scale: 1.05 }}
+                    whileTap={{ scale: 0.95 }}
+                    >
                         About Our Refinery <ArrowRight className="w-4 h-4" />
-                    </Link>
-                </motion.button>
+                    </motion.button>
+                </Link>
             </motion.div>
             </div>
         </div>

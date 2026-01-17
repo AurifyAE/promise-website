@@ -73,19 +73,19 @@ const InvestmentOptions = () => {
             viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
           >
-            <motion.button 
-              className="flex h-14 w-14 items-center justify-center rounded-full bg-[#ECC273] shadow-md transition-transform hover:scale-105 cursor-pointer"
-              initial={{ opacity: 0, scale: 0 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: 0.4, type: "spring", stiffness: 200 }}
-              whileHover={{ scale: 1.1 }}
-              whileTap={{ scale: 0.95 }}
-            >
-              <Link href="/products" className="flex items-center justify-center">
-                <ArrowRight className="w-4 h-4 text-black" />
-              </Link>
-            </motion.button>
+            <Link href="/products" className="flex items-center justify-center">
+              <motion.button 
+                className="flex h-14 w-14 items-center justify-center rounded-full bg-[#ECC273] shadow-md transition-transform hover:scale-105 cursor-pointer"
+                initial={{ opacity: 0, scale: 0 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: 0.4, type: "spring", stiffness: 200 }}
+                whileHover={{ scale: 1.1 }}
+                whileTap={{ scale: 0.95 }}
+              >
+                  <ArrowRight className="w-4 h-4 text-black" />
+              </motion.button>
+            </Link>
             <motion.h2 
               className="text-4xl md:text-5xl font-bold tracking-tight text-black text-right lg:text-left lg:-rotate-6 leading-tight whitespace-nowrap"
               initial={{ opacity: 0, y: 50 }}
