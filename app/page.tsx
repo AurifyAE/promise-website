@@ -2,7 +2,7 @@ import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import Contact from "./components/Contact";
 import Testimonials from "./components/Testimonials";
-import Services from "./components/Services";
+import ServiceSection from "./components/home/ServiceSection";
 import HeroSection from "./components/home/HeroSection";
 import Link from "next/link";
 import AboutSection from "./components/home/AboutSection";
@@ -22,7 +22,7 @@ export default function Home() {
       {/* About Section */}
       <AboutSection />
 
-      <Services />
+      <ServiceSection />
 
       <WhyChooseUs />
 

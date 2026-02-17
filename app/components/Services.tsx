@@ -40,6 +40,7 @@ const services = [
   },
 ];
 
+// This component is no longer used and will be used in the future. ServiceSection is used instead.  
 export default function Services() {
   return (
     <section className="py-20 bg-white">
@@ -144,7 +145,7 @@ export default function Services() {
                         src={service.imageSrc}
                         alt={service.alt}
                         fill
-                        className="object-contain transition-transform duration-700 group-hover:scale-105"
+                        className="object-cover transition-transform duration-700 group-hover:scale-105"
                       />
                     </motion.div>
 
@@ -252,7 +253,7 @@ export default function Services() {
                         src={service.imageSrc}
                         alt={service.alt}
                         fill
-                        className="object-contain transition-transform duration-700 group-hover:scale-105"
+                        className="object-cover transition-transform duration-700 group-hover:scale-105"
                       />
                     </motion.div>
 

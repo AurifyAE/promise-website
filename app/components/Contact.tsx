@@ -48,7 +48,10 @@ export default function Contact() {
               className='mb-6'
             >
               <h2 className="text-2xl md:text-3xl text-white font-semibold mb-1">Contact Information</h2>
-              <p className='text-base md:text-lg text-white'>Say something to start a live chat!</p>
+              <p className='text-sm md:text-base max-w-lg text-pretty text-white'>
+                Our team is available to support clients with refining inquiries, account establishment, and operational coordination.
+              </p>
+              
             </motion.div>
             <div className="space-y-6 text-sm md:text-base">
               <motion.div

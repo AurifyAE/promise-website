@@ -37,12 +37,13 @@ const WhyChooseUs = () => {
                   }}
                 >
                   <h3 className="text-lg font-semibold text-[#C2882A] leading-snug">
-                    Experience &amp;
+                    The desert teaches patience.
                     <br />
-                    Expertise
+                      Fire teaches truth.
                   </h3>
                   <p className="mt-2 text-zinc-700 leading-relaxed">
-                    Decades of refining knowledge and global best practices.
+                  We believe that refining is not simply the removal of impurity - it is the revelation of essence.<br/>
+                  Our philosophy rests upon three enduring principles:
                   </p>
                 </motion.div>
 
@@ -57,12 +58,12 @@ const WhyChooseUs = () => {
                   }}
                 >
                   <h3 className="text-lg font-semibold text-[#C2882A] leading-snug">
-                    Transparency &amp;
+                  Integrity in 
                     <br />
-                    Security
+                    Origin
                   </h3>
                   <p className="mt-2 text-zinc-700 leading-relaxed">
-                    Full traceability and documented chain-of-custody.
+                  Every metal carries a history. We honor its journey through responsible sourcing and transparent handling.
                   </p>
                 </motion.div>
 
@@ -77,12 +78,12 @@ const WhyChooseUs = () => {
                   }}
                 >
                   <h3 className="text-lg font-semibold text-[#C2882A] leading-snug">
-                    Responsible
+                  Discipline in 
                     <br />
-                    Sourcing
+                    Process
                   </h3>
                   <p className="mt-2 text-zinc-700 leading-relaxed">
-                    100% OECD-compliant ethical refining and sourcing.
+                  Refinement is achieved not through speed, but through precision and control.
                   </p>
                 </motion.div>
 
@@ -97,12 +98,12 @@ const WhyChooseUs = () => {
                   }}
                 >
                   <h3 className="text-lg font-semibold text-[#C2882A] leading-snug">
-                    Advanced
+                  Continuity in 
                     <br />
-                    Technology
+                    Value
                   </h3>
                   <p className="mt-2 text-zinc-700 leading-relaxed">
-                    Precision equipment ensuring consistently high recovery rates.
+                  Gold endures beyond markets, beyond generations. Our responsibility is to ensure its continuity remains uncompromised.
                   </p>
                 </motion.div>
               </div>

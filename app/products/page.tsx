@@ -19,16 +19,31 @@ export default function ProductsPage() {
       <Navbar />
 
       <main className="pt-24 md:pt-32 pb-20">
-        <div className="container mx-auto px-4 md:px-8">
-          <section className="mb-12 text-center">
-            <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-black mb-4">
-              Gold Investment Bars
+        <div className="container max-w-6xl mx-auto px-4 md:px-8">
+          <section className="mb-16 ">
+            <h1 className="text-2xl md:text-3xl lg:text-4xl text-center font-bold text-black mb-8">
+              Investment Bars and Refined Precious Metals
             </h1>
-            <p className="text-gray-700 max-w-2xl mx-auto text-sm md:text-base">
-              Explore our range of high‑purity 24K gold bars, refined to
-              international standards and ideal for investors, jewellers, and
-              institutions.
+            <p className="text-gray-700 mx-auto text-sm md:text-base">
+            Throughout history, refined gold and silver have served as instruments of wealth preservation, exchange, and continuity. At Promise Gold Refinery, we offer a range of investment bars and refined precious metals that are ideal for investors, jewellers, and institutions.
             </p>
+            <p className="text-gray-700 mx-auto text-sm md:text-base">
+              Promise Gold Refinery produces refined precious metals in structured bar formats suitable for commercial, institutional, and investment use.
+            </p>
+            <div className="mt-6 space-y-2 text-gray-700 mx-auto text-sm md:text-base">
+              <p className="font-semibold">Our products include:</p>
+              <p>
+                <span className="font-semibold">Gold Bars</span> – Produced in controlled casting environments, ensuring
+                consistency, structural integrity, and purity verification.
+              </p>
+              <p>
+                <span className="font-semibold">Silver Bars</span> – Refined silver bars suitable for industrial and
+                investment applications.
+              </p>
+              <p>
+                Each bar undergoes rigorous metallurgical processes and quality verification prior to release.
+              </p>
+            </div>
           </section>
 
           <section className="flex flex-wrap items-baseline justify-center gap-10">

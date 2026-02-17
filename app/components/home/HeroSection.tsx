@@ -8,7 +8,7 @@ import whatsAppIcon from '../../../public/icons/whatsapp-yellow.svg'
 function AnimatedHeading({ text, delay = 0 }: { text: string; delay?: number }) {
     return (
         <motion.h1
-            className="mb-1 text-3xl md:text-4xl lg:text-5xl"
+            className="mb-1 text-xl md:text-4xl"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.5, delay }}
@@ -60,20 +60,21 @@ export default function HeroSection() {
                     animate={{ opacity: 1 }}
                     transition={{ duration: 0.5, delay: 0.3 }}
                 >
-                    <div className="mb-1 text-3xl md:text-4xl lg:text-5xl">
-                        <AnimatedHeading text="Excellence in" delay={0.3} />
+                    <div className="mb-1 font-bold text-xl md:text-3xl">
+                        <AnimatedHeading text="Where Fire Reveals Truth." delay={0.3} />
                     </div>
-                    <div className="mb-8 text-3xl font-bold md:text-4xl lg:text-5xl">
-                        <AnimatedHeading text="Precious Metals Refining" delay={1.2} />
+                    <div className="mb-8 text-xl md:text-3xl">
+                        <AnimatedHeading text="Where Metal Becomes Trust." delay={1.2} />
                     </div>
 
                     <motion.p
                         initial={{ opacity: 0, y: 30 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ delay: 2.2, duration: 0.8, ease: "easeOut" }}
-                        className="mb-8 text-sm md:text-base"
+                        className="w-lg mb-8 text-sm md:text-base text-pretty"
                     >
-                        Sharjah's trusted gold and precious metals refinery, delivering world-class refining, assaying, recycling, and silver purification services with integrity and precision.
+                        In the ancient lands where trade shaped civilizations, gold was never merely a metal. It was certainty. It was continuity. It was legacy.<br/><br/>At Promise Gold Refinery, we continue that legacy - refining precious metals with precision, discipline, and unwavering integrity.
+
                     </motion.p>
                     <Link href="/services" className='inline-block'>
                         <motion.button
