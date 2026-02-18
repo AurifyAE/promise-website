@@ -24,14 +24,14 @@ const cards: ServiceCard[] = [
   {
     kind: 'service',
     title: 'Precision Assaying',
-    imageSrc: '/images/home/certified-assaying.jpg',
+    imageSrc: '/images/services/assaying-of-gold.jpeg',
     description: 'Our assay laboratory conducts precise metallurgical analysis to determine the purity and composition of precious metals.',
     alt: 'Gold being poured into a mold',
   },
   {
     kind: 'service',
     title: 'Controlled Smelting Operations',
-    imageSrc: '/images/home/certified-assaying.jpg',
+    imageSrc: '/images/services/smelting.png',
     description: 'Our smelting operations are conducted under controlled thermal environments, ensuring efficient separation of precious metals from base material.',
     alt: 'Furnace with glowing hot metal inside',
   },
@@ -45,14 +45,14 @@ const cards: ServiceCard[] = [
   {
     kind: 'service',
     title: 'Investment Bar Casting',
-    imageSrc: '/images/home/refinery-image.jpg',
+    imageSrc: '/images/services/casting-of-bars.png',
     description: 'Following refining, precious metals are cast into bar form through controlled casting procedures.',
     alt: 'Refined silver granules',
   },
   {
     kind: 'service',
     title: 'Precious Metal Recycling and Recovery',
-    imageSrc: '/images/home/metal-recycling.jpg',
+    imageSrc: '/images/services/recycling.png',
     description: 'Precious metals retain their value beyond their first form. Our recycling services recover precious metals from scrap, industrial waste, and residual material.',
     alt: 'Refined silver granules',
   },

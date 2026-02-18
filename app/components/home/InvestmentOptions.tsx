@@ -17,7 +17,7 @@ const InvestmentOptions = () => {
   return (
     <section className="py-20 bg-white">
       <div className="container mx-auto px-4 md:px-8">
-        <div className="flex flex-col lg:flex-row items-center gap-12">
+        <div className="flex flex-col-reverse lg:flex-row items-center gap-12">
           {/* Left: Product carousel */}
           <motion.div 
             className="flex-1 w-full overflow-x-auto overflow-y-hidden pb-10 custom-scrollbar"

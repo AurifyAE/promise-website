@@ -14,7 +14,7 @@ export default function AboutPage() {
       <Navbar />
       
       {/* Top Section - Text Left, Image Right with Curved Shape */}
-      <section className="relative pt-20 md:pt-24 pb-0 overflow-hidden">
+      <section className="relative pt-30 md:pt-24 pb-0 overflow-hidden">
         <div className="container mx-auto px-4 md:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
             {/* Left Side - Text */}
@@ -26,7 +26,7 @@ export default function AboutPage() {
                 duration: 0.8,
                 ease: [0.16, 1, 0.3, 1],
               }}
-              className="py-12 lg:py-20"
+              className="py-6 lg:py-20 order-2 lg:order-1"
             >
               <motion.h2
                 initial={{ opacity: 0, y: 20 }}
@@ -104,10 +104,10 @@ export default function AboutPage() {
                 delay: 0.2,
                 ease: [0.16, 1, 0.3, 1],
               }}
-              className="relative h-[400px] md:h-[500px]"
+              className="relative h-[400px] md:h-[500px] order-1 lg:order-2"
             >
               {/* Image */}
-              <div className="relative h-full w-full rounded-l-[300px] overflow-hidden">
+              <div className="relative h-full w-full rounded-2xl md:rounded-l-[300px] overflow-hidden">
                 <Image
                   src="/images/about/about-img1.png"
                   alt="Refinery facility"
@@ -128,7 +128,7 @@ export default function AboutPage() {
           <div className="grid grid-cols-1 lg:grid-cols-1 gap-8 items-center">
             
 
-            {/* Right Side - Text and Buttons */}
+          
             <motion.div
               initial={{ opacity: 0, x: 60 }}
               whileInView={{ opacity: 1, x: 0 }}
@@ -137,7 +137,7 @@ export default function AboutPage() {
                 duration: 0.8,
                 ease: [0.16, 1, 0.3, 1],
               }}
-              className="py-12 lg:py-20 text-center"
+              className="py-6 lg:py-20 md:text-center"
             >
               {/* <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-black mb-6">
                 Customised Precious-Metal Refining Solutions
@@ -182,45 +182,48 @@ export default function AboutPage() {
                 With a refining capacity of 400 kilograms per shift, the facility is equipped to handle a wide range
                 of precious metal inputs, including:
               </motion.p>
-              <motion.div
-              initial={{ opacity: 0, x: -60, scale: 0.95 }}
-              whileInView={{ opacity: 1, x: 0, scale: 1 }}
-              viewport={{ once: true, margin: "-50px" }}
-              transition={{
-                duration: 0.8,
-                delay: 0.2,
-                ease: [0.16, 1, 0.3, 1],
-              }}
-              className="relative h-[400px] md:h-[500px] overflow-hidden order-2 lg:order-1"
-            >
-              <Image
-                src="/images/about/steps-of-gold-refining.svg"
-                alt="Gold refining process"
-                fill
-                className="object-contain"
-                priority
-              />
-              </motion.div>
+              
+              <div className="flex flex-col md:flex-row items-center justify-center md:gap-8 w-full my-10">
+                <motion.div
+                  initial={{ opacity: 0, x: -60, scale: 0.95 }}
+                  whileInView={{ opacity: 1, x: 0, scale: 1 }}
+                  viewport={{ once: true, margin: "-50px" }}
+                  transition={{
+                    duration: 0.8,
+                    delay: 0.2,
+                    ease: [0.16, 1, 0.3, 1],
+                  }}
+                  className="relative w-full md:w-1/2 h-64 sm:h-80 md:h-[560px] overflow-hidden mb-6 md:mb-0"
+                >
+                  <Image
+                    src="/images/about/steps-of-gold-refining.svg"
+                    alt="Gold refining process"
+                    fill
+                    className="object-contain"
+                    priority
+                  />
+                </motion.div>
 
-              <motion.div
-              initial={{ opacity: 0, x: -60, scale: 0.95 }}
-              whileInView={{ opacity: 1, x: 0, scale: 1 }}
-              viewport={{ once: true, margin: "-50px" }}
-              transition={{
-                duration: 0.8,
-                delay: 0.2,
-                ease: [0.16, 1, 0.3, 1],
-              }}
-              className="relative h-[400px] md:h-[500px] overflow-hidden order-2 lg:order-1"
-            >
-              <Image
-                src="/images/about/metal-processing.svg"
-                alt="Gold refining process"
-                fill
-                className="object-contain"
-                priority
-              />
-              </motion.div>
+                <motion.div
+                  initial={{ opacity: 0, x: 60, scale: 0.95 }}
+                  whileInView={{ opacity: 1, x: 0, scale: 1 }}
+                  viewport={{ once: true, margin: "-50px" }}
+                  transition={{
+                    duration: 0.8,
+                    delay: 0.2,
+                    ease: [0.16, 1, 0.3, 1],
+                  }}
+                  className="relative w-full md:w-1/2 h-72 sm:h-80 md:h-[560px] overflow-hidden"
+                >
+                  <Image
+                    src="/images/about/metal-processing.svg"
+                    alt="Gold refining process"
+                    fill
+                    className="object-contain"
+                    priority
+                  />
+                </motion.div>
+              </div>
               <motion.p
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -240,7 +243,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <section className="relative pt-20 md:pt-24 pb-0 overflow-hidden">
+      <section className="relative pt-10 md:pt-24 pb-0 overflow-hidden">
         <div className="container mx-auto px-4 md:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
 
@@ -257,7 +260,7 @@ export default function AboutPage() {
               className="relative h-[400px] md:h-[500px]"
             >
               {/* Image */}
-              <div className="relative h-full w-full rounded-r-[300px] overflow-hidden">
+              <div className="relative h-full w-full rounded-2xl md:rounded-r-[300px] overflow-hidden">
                 <Image
                   src="/images/about/about-img1.png"
                   alt="Refinery facility"
@@ -278,7 +281,7 @@ export default function AboutPage() {
                 duration: 0.8,
                 ease: [0.16, 1, 0.3, 1],
               }}
-              className="py-12 lg:py-20"
+              className="py-6 lg:py-20"
             >
               <motion.h2
                 initial={{ opacity: 0, y: 20 }}
@@ -351,7 +354,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <section className="relative pt-20 md:pt-24 pb-0 overflow-hidden">
+      <section className="relative pt-10 md:pt-24 pb-0 overflow-hidden">
         <div className="container mx-auto px-4 md:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
 
@@ -364,7 +367,7 @@ export default function AboutPage() {
                 duration: 0.8,
                 ease: [0.16, 1, 0.3, 1],
               }}
-              className="py-12 lg:py-20"
+              className="py-6 lg:py-20 order-2 lg:order-1"
             >
               <motion.h2
                 initial={{ opacity: 0, y: 20 }}
@@ -437,10 +440,10 @@ export default function AboutPage() {
                 delay: 0.2,
                 ease: [0.16, 1, 0.3, 1],
               }}
-              className="relative h-[400px] md:h-[500px]"
+              className="relative h-[400px] md:h-[500px] order-1 lg:order-2"
             >
               {/* Image */}
-              <div className="relative h-full w-full rounded-l-[300px] overflow-hidden">
+              <div className="relative h-full w-full rounded-2xl md:rounded-l-[300px] overflow-hidden">
                 <Image
                   src="/images/about/about-img1.png"
                   alt="Refinery facility"

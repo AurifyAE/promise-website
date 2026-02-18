@@ -110,9 +110,9 @@ const WhyChooseUs = () => {
             </div>
 
             <div className="flex flex-col lg:items-end justify-between gap-10">
-              <div className="relative md:h-60 md:w-30 lg:h-96 lg:w-80 bg-white -mt-180 md:-mr-120 md:-mt-120 lg:mr-0 lg:-mt-30 -rotate-12 rounded-full mb-5 opacity-50 md:opacity-100">
+              <div className="relative md:h-56 md:w-30 lg:h-96 lg:w-80 bg-white -mt-180 md:ml-120 md:-mt-160 lg:mr-0 lg:-mt-30 lg:-rotate-12 rounded-full mb-5 opacity-50 md:opacity-100">
                 <motion.div 
-                  className="absolute right-5 md:right-15 lg:top-0 lg:right-30 w-12 h-12 md:w-15 md:h-15 lg:h-30 lg:w-30 rounded-full bg-[#ECC273]"
+                  className="absolute right-5 md:right-10 lg:top-0 lg:right-30 w-12 h-12 md:w-15 md:h-15 lg:h-30 lg:w-30 rounded-full bg-[#ECC273]"
                   initial={{ opacity: 0, scale: 0 }}
                   whileInView={{ opacity: 1, scale: 1 }}
                   viewport={{ once: true, margin: "-100px" }}
@@ -124,7 +124,7 @@ const WhyChooseUs = () => {
                   }}
                 />
                 <motion.div 
-                  className="absolute top-15 right-0 md:top-18  md:right-5 lg:top-35 lg:right-10 w-12 h-12 md:w-15 md:h-15  lg:h-30 lg:w-30 rounded-full bg-[#294734]/50"
+                  className="absolute top-15 right-0 md:top-18  md:right-0 lg:top-35 lg:right-10 w-12 h-12 md:w-15 md:h-15  lg:h-30 lg:w-30 rounded-full bg-[#294734]/50"
                   initial={{ opacity: 0, scale: 0 }}
                   whileInView={{ opacity: 1, scale: 1 }}
                   viewport={{ once: true, margin: "-100px" }}
@@ -136,7 +136,7 @@ const WhyChooseUs = () => {
                   }}
                 />
                 <motion.div 
-                  className="absolute top-30 md:top-28 right-5 md:right-10 lg:top-70 lg:right-28 w-12 h-12 md:w-15 md:h-15 lg:h-30 lg:w-30 rounded-full bg-[#294734]"
+                  className="absolute top-30 md:top-36 right-5 md:right-5 lg:top-70 lg:right-28 w-12 h-12 md:w-15 md:h-15 lg:h-30 lg:w-30 rounded-full bg-[#294734]"
                   initial={{ opacity: 0, scale: 0 }}
                   whileInView={{ opacity: 1, scale: 1 }}
                   viewport={{ once: true, margin: "-100px" }}

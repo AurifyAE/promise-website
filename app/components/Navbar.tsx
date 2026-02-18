@@ -54,41 +54,56 @@ export default function Navbar() {
       {/* Fixed Top Bar */}
       <header className="fixed top-0 left-0 right-0 z-50 bg-[#294734]/85 backdrop-blur-md shadow-2xl">
         <div className="relative flex items-center justify-between px-6 py-5 md:px-10 h-20 md:h-24">
-          {/* Hamburger Button — visible only on mobile */}
-          <button
-            onClick={toggle}
-            className="relative z-50 flex h-8 w-10 flex-col justify-center gap-1 focus:outline-none"
-            aria-label="Toggle menu"
-          >
-            {/* Top line → becomes top arm of X */}
-            <span
-              className={`block h-1 w-9 bg-[#A97C50]/60 rounded-full transition-all duration-300 origin-center ${
-                isOpen
-                  ? 'rotate-45 translate-y-1'
-                  : 'rotate-0 translate-y-0'
-              }`}
-            />
 
-            {/* Middle line → fades out */}
-            <span
-              className={`block h-1 w-9 bg-[#A97C50]/60 rounded-full transition-all duration-300 ${
-                isOpen ? 'opacity-0 scale-0' : 'opacity-100 scale-100'
-              }`}
-            />
+          {/* Left — Hamburger + Logo together on mobile */}
+          <div className="flex items-center gap-2">
+            {/* Hamburger Button */}
+            <button
+              onClick={toggle}
+              className="relative z-50 flex h-8 w-10 flex-col justify-center gap-1 focus:outline-none"
+              aria-label="Toggle menu"
+            >
+              {/* Top line → becomes top arm of X */}
+              <span
+                className={`block h-1 w-9 bg-[#A97C50]/60 rounded-full transition-all duration-300 origin-center ${
+                  isOpen
+                    ? 'rotate-45 translate-y-1'
+                    : 'rotate-0 translate-y-0'
+                }`}
+              />
 
-            {/* Bottom line → becomes bottom arm of X */}
-            <span
-              className={`block h-1 w-9 bg-[#A97C50]/60 rounded-full transition-all duration-300 origin-center ${
-                isOpen
-                  ? '-rotate-45 -translate-y-3'
-                  : 'rotate-0 translate-y-0'
-              }`}
-            />
-          </button>
-          
+              {/* Middle line → fades out */}
+              <span
+                className={`block h-1 w-9 bg-[#A97C50]/60 rounded-full transition-all duration-300 ${
+                  isOpen ? 'opacity-0 scale-0' : 'opacity-100 scale-100'
+                }`}
+              />
 
-          {/* Logo — Centered on mobile, left-aligned on md+ */}
-          <div className="absolute inset-x-0 flex justify-center pointer-events-none md:pointer-events-auto md:static">
+              {/* Bottom line → becomes bottom arm of X */}
+              <span
+                className={`block h-1 w-9 bg-[#A97C50]/60 rounded-full transition-all duration-300 origin-center ${
+                  isOpen
+                    ? '-rotate-45 -translate-y-3'
+                    : 'rotate-0 translate-y-0'
+                }`}
+              />
+            </button>
+
+            {/* Logo — mobile only, right next to hamburger */}
+            <Link href="/" onClick={close} className="md:hidden">
+              <Image
+                src="/images/home/promise-refinery-logo.svg"
+                alt="Promise Gold Refinery"
+                width={200}
+                height={36}
+                priority
+                className="h-24 w-auto"
+              />
+            </Link>
+          </div>
+
+          {/* Logo — desktop only, centered */}
+          <div className="hidden md:absolute md:inset-x-0 md:flex md:justify-center md:pointer-events-none">
             <Link href="/" onClick={close} className="pointer-events-auto">
               <Image
                 src="/images/home/promise-refinery-logo.svg"
@@ -96,13 +111,13 @@ export default function Navbar() {
                 width={200}
                 height={36}
                 priority
-                className="h-24 w-auto md:h-36"
+                className="h-36 w-auto"
               />
             </Link>
           </div>
           
           {/* Contact Us Dropdown with delayed open/close on hover/focus */}
-          <div className="relative w-32 h-10 flex items-center justify-end"
+          <div className="relative w-28 md:w-32 h-10 flex items-center justify-end"
             onMouseEnter={() => {
               clearTimeout((window as any).__contactDropdownTimeout__);
               (window as any).__contactDropdownTimeout__ = setTimeout(() => setDropdownOpen(true), 160);
@@ -122,7 +137,7 @@ export default function Navbar() {
             tabIndex={-1}
           >
             <button
-              className="flex items-center gap-2 px-3 py-2 rounded-full bg-[#294734]/90 hover:bg-[#294734] text-white text-sm font-medium transition focus:outline-none"
+              className="flex items-center gap-0 md:gap-2 px-3 py-2 rounded-full bg-[#294734]/90 hover:bg-[#294734] text-white text-xs md:text-sm md:font-medium transition focus:outline-none"
               tabIndex={0}
               aria-haspopup="true"
               aria-expanded={dropdownOpen}
@@ -175,7 +190,7 @@ export default function Navbar() {
                       {/* Email Option */}
                       <li>
                         <a
-                          href="mailto:contact@promise-refinery.com"
+                          href="mailto:compliance@promisegoldrefinery.com"
                           className="flex items-center gap-3 px-4 py-2 hover:bg-zinc-100 transition text-[#294734]"
                         >
                           <Image
