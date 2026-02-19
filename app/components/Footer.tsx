@@ -5,19 +5,21 @@ import { ArrowRight } from 'lucide-react';
 const quickLinks = [
   { label: "About Us", href: "/about-us" },
   { label: "Products", href: "/products" },
-  { label: "Policices & Certifications", href: "/certificate-and-policies" },
+  { label: "Policies & Certifications", href: "/certificate-and-policies" },
   { label: "Gallery", href: "/gallery" },
   { label: "Contact Us", href: "/contact-us" },
-  { label: "News", href: "/news" },
-  { label: "Blogs", href: "/blogs" },
+  // { label: "News", href: "/news" },
+  // { label: "Blogs", href: "/blogs" },
   { label: "FAQ", href: "/faq" },
 ];
 
 const services = [
-  { label: "Gold Refining", href: "/services/gold-refining" },
-  { label: "Assaying Services", href: "/services/assaying-services" },
-  { label: "Metal Recycling", href: "/services/metal-recycling" },
-  { label: "Silver Refining", href: "/services/silver-refining" },
+  { label: "Precision Assaying", href: "/services" },
+  { label: "Controlled Smelting Operations", href: "/services" },
+  { label: "Advanced Gold and Silver Refining", href: "/services" },
+  { label: "Investment Bar Casting", href: "/services" },
+  { label: "Precious Metal Recycling and Recovery", href: "/services" },
+
 ];
 
 

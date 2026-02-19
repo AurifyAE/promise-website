@@ -15,7 +15,7 @@ const heightMap: Record<string, string> = {
 
 const InvestmentOptions = () => {
   return (
-    <section className="py-20 bg-white">
+    <section className="pt-10 pb-5 md:py-20 bg-white">
       <div className="container mx-auto px-4 md:px-8">
         <div className="flex flex-col-reverse lg:flex-row items-center gap-12">
           {/* Left: Product carousel */}
@@ -87,9 +87,9 @@ const InvestmentOptions = () => {
               </motion.button>
             </Link>
             <motion.h2 
-              className="text-4xl md:text-5xl font-bold tracking-tight text-black text-right lg:text-left lg:-rotate-6 leading-tight whitespace-nowrap"
-              initial={{ opacity: 0, y: 50 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              className="text-4xl md:text-5xl font-bold tracking-tight text-black text-right lg:text-left leading-tight whitespace-nowrap"
+              initial={{ opacity: 0, rotate: -30, scale: 0.8 }}
+              whileInView={{ opacity: 1, rotate: 0, scale: 1 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.6, ease: "easeOut" }}
             >

@@ -6,7 +6,7 @@ import Link from 'next/link';
 
 const WhyChooseUs = () => {
   return (
-    <section className="py-20 bg-white">
+    <section className="py-10 md:py-20 bg-white">
       <div className="container mx-auto px-4 md:px-8">
         <div className="relative overflow-visible rounded-[40px] border border-[#E3C9A4] bg-white px-8 py-12 md:px-12 md:py-14">
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-10 lg:gap-16 items-start">

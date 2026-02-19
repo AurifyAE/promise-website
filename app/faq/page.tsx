@@ -28,7 +28,19 @@ export default function FAQPage() {
         <div className="absolute inset-0 bg-[#294734]" />
         <div className="absolute inset-0 bg-black/30" />
         <div className="relative z-10 flex h-full items-center justify-center px-4">
-          <h1 className="text-3xl md:text-4xl font-bold text-white text-center">Frequently Asked Questions</h1>
+          <div className="text-center max-w-2xl mx-auto">
+            <h1 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Frequently Asked Questions
+            </h1>
+            <div className="space-y-2 text-gray-300 text-base md:text-lg">
+              <p>
+                We provide clear answers to common operational and procedural questions regarding refining, assay, processing timelines, and settlement practices.
+              </p>
+              <p>
+                Our aim is to ensure clarity at every stage.
+              </p>
+            </div>
+          </div>
         </div>
       </section>
 

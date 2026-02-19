@@ -72,7 +72,7 @@ export default function ProductDetailPage() {
 
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-white overflow-hidden">
       <Navbar />
 
       <main className="pt-24 md:pt-32 pb-20">
@@ -280,7 +280,7 @@ export default function ProductDetailPage() {
                     delay: 0.2,
                     ease: [0.16, 1, 0.3, 1],
                   }}
-                  className="mt-6 h-16 w-56 rounded-full bg-black flex items-center justify-center text-[10px] tracking-[0.2em] text-white uppercase"
+                  className="hidden md:flex mt-6 h-16 w-56 rounded-full bg-black items-center justify-center text-[10px] tracking-[0.2em] text-white uppercase"
                 >
                   {current.name.toUpperCase().replace(/for Fire assay Lab analysis/gi, "").trim()}
                 </motion.div>

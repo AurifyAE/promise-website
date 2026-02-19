@@ -8,7 +8,7 @@ import whatsAppIcon from '../../../public/icons/whatsapp-yellow.svg'
 function AnimatedHeading({ text, delay = 0 }: { text: string; delay?: number }) {
     return (
         <motion.h1
-            className="mb-1 text-xl md:text-4xl"
+            className="mb-1 text-2xl md:text-4xl"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.5, delay }}
@@ -49,11 +49,11 @@ export default function HeroSection() {
                     Your browser does not support the video tag.
                 </video>
                 {/* Overlay */}
-                <div className="absolute inset-0 bg-black/50"></div>
+                <div className="absolute inset-0 bg-black/70 md:bg-black/50"></div>
             </div>
 
             {/* Hero Content */}
-            <div className="relative z-10 flex h-full w-full flex-col justify-center px-8 text-left text-white md:px-16 lg:px-24">
+            <div className="relative z-10 flex h-full w-full flex-col justify-end md:justify-center px-8 text-left text-white md:px-16 lg:px-24 py-10 md:py-0">
                 <motion.div
                     className="max-w-2xl"
                     initial={{ opacity: 0 }}
@@ -71,7 +71,7 @@ export default function HeroSection() {
                         initial={{ opacity: 0, y: 30 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ delay: 2.2, duration: 0.8, ease: "easeOut" }}
-                        className="w-lg mb-8 text-sm md:text-base text-pretty"
+                        className="w-sm md:w-lg mb-8 text-sm md:text-base text-pretty"
                     >
                         In the ancient lands where trade shaped civilizations, gold was never merely a metal. It was certainty. It was continuity. It was legacy.<br/><br/>At Promise Gold Refinery, we continue that legacy - refining precious metals with precision, discipline, and unwavering integrity.
 

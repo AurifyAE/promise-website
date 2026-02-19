@@ -54,7 +54,7 @@ export default function GalleryPage() {
     <div className="min-h-screen bg-white">
       <Navbar />
       
-      <div className="pt-20 md:pt-32 pb-20">
+      <div className="pt-32 pb-20">
         <div className="container mx-auto px-4 md:px-8">
           {/* Header Section */}
           <motion.div
@@ -64,12 +64,12 @@ export default function GalleryPage() {
             transition={{ duration: 0.75, ease: [0.16, 1, 0.3, 1] }}
           >
             <motion.h1
-              className="text-3xl md:text-4xl lg:text-5xl font-bold text-black mb-4 transform -rotate-2 inline-block"
+              className="text-3xl md:text-4xl lg:text-5xl font-bold text-black mb-4 transform inline-block"
               initial={{ opacity: 0, rotate: -10, scale: 0.9 }}
-              animate={{ opacity: 1, rotate: -2, scale: 1 }}
+              animate={{ opacity: 1, rotate: 0, scale: 1 }}
               transition={{ duration: 0.9, delay: 0.07 }}
             >
-              OUR GALLERY
+              Our Gallery
             </motion.h1>
             <motion.h2
               className="text-base md:text-lg text-black mb-6 font-normal"

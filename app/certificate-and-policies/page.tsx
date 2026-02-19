@@ -45,9 +45,9 @@ export default function CertificateAndPolicies() {
                 duration: 0.6,
                 ease: [0.16, 1, 0.3, 1],
               }}
-              className="text-4xl md:text-5xl font-bold text-black text-center mb-8"
+              className="text-2xl md:text-4xl font-bold text-black text-center mb-8"
             >
-                POLICIES AND CERTIFICATES
+                Policies & Certificates
             </motion.h2>
             
             <motion.p

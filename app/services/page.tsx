@@ -17,7 +17,7 @@ const services = [
     ],
     imageSrc: '/images/services/assaying-of-gold.jpeg',
     alt: 'Assay laboratory',
-    href: '/services/assaying-services',
+    href: '/contact-us',
   },
   {
     title: 'Smelting',
@@ -28,7 +28,7 @@ const services = [
     ],
     imageSrc: '/images/services/smelting.png',
     alt: 'Smelting operations',
-    href: '/services/gold-refining',
+    href: '/contact-us',
   },
   {
     title: 'Refining',
@@ -39,7 +39,7 @@ const services = [
     ],
     imageSrc: '/images/home/refinery-image.jpg',
     alt: 'Refining process',
-    href: '/services/gold-refining',
+    href: '/contact-us',
   },
   {
     title: 'Casting',
@@ -50,7 +50,7 @@ const services = [
     ],
     imageSrc: '/images/services/casting-of-bars.png',
     alt: 'Casting and bar production',
-    href: '/products',
+    href: '/contact-us',
   },
   {
     title: 'Precious Metal Recycling',
@@ -61,7 +61,7 @@ const services = [
     ],
     imageSrc: '/images/services/recycling.png',
     alt: 'Precious metal recycling',
-    href: '/services/metal-recycling',
+    href: '/contact-us',
   },
 ];
 
@@ -137,7 +137,7 @@ export default function ServicesPage() {
                           
                           className="flex items-center gap-2 rounded-full bg-[#EBDECF] px-5 py-2.5 text-sm font-semibold text-zinc-900 transition-colors duration-300 hover:bg-[#D9C8B4]"
                         >
-                          Know More
+                          Enquiry Now
                           <motion.div
                             animate={{ x: [0, 4, 0] }}
                             transition={{ duration: 1, repeat: Infinity, repeatDelay: 0.5 }}

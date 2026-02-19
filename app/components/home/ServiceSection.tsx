@@ -60,7 +60,7 @@ const cards: ServiceCard[] = [
     kind: 'cta',
     title: 'Every Product is Guaranteed Purity',
     description:
-      'Accurate, traceable processes and rigorous quality checks ensure confidence in every bar and every batch.',
+      'Every process is governed by structured metallurgical discipline, ensuring measurable, verifiable, and consistent results.',
     href: '/services',
   },
 ];
@@ -100,16 +100,24 @@ export default function ServiceSection() {
   };
 
   return (
-    <section className="bg-white py-20">
+    <section className="bg-white py-10 md:py-20">
       <div className="container mx-auto px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: -20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: '-50px' }}
           transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
-          className="mx-auto mb-12 max-w-3xl text-center"
+          className="mx-auto mb-6 md:mb-12 max-w-3xl text-center"
         >
-          <h2 className="text-4xl font-bold text-zinc-900 md:text-5xl">Our Services</h2>
+          <motion.h1
+              className="text-2xl md:text-4xl lg:text-5xl font-bold text-zinc-900 mb-1 md:mb-4 transform inline-block"
+              initial={{ opacity: 0, rotate: -20, scale: 0.6 }}
+              animate={{ opacity: 1, rotate: 0, scale: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.9, delay: 0.9, ease: "easeOut" }}
+            >
+              Our Services
+            </motion.h1>
         </motion.div>
 
         <motion.div
@@ -145,7 +153,7 @@ export default function ServiceSection() {
                       whileInView={{ opacity: 1 }}
                       viewport={{ once: true }}
                       transition={{ duration: 0.5, delay: 0.4 }}
-                      className="mt-4 text-xs md:text-sm xl:text-base leading-relaxed text-zinc-700"
+                      className="mt-4 text-sm md:text-base xl:text-base leading-relaxed text-zinc-700"
                     >
                       {card.description}
                     </motion.p>
@@ -162,7 +170,7 @@ export default function ServiceSection() {
                       <motion.span
                         whileHover={{ scale: 1.05 }}
                         whileTap={{ scale: 0.95 }}
-                        className="flex items-center justify-center gap-2 rounded-full bg-[#EBDECF] px-6 py-3 text-black transition-colors duration-300 hover:bg-[#D9C8B4]"
+                        className="flex items-center justify-center gap-2 rounded-full bg-[#EBDECF] text-sm md:text-base px-6 py-3 text-black transition-colors duration-300 hover:bg-[#D9C8B4]"
                       >
                         Know More
                         <motion.div
@@ -220,7 +228,7 @@ export default function ServiceSection() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.5, delay: 0.3 }}
-                  className="mt-4 text-xs md:text-sm xl:text-base leading-relaxed text-zinc-700"
+                  className="mt-4 text-sm md:text-base leading-relaxed text-zinc-700"
                 >
                   {card.description}
                 </motion.p>

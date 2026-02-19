@@ -7,7 +7,7 @@ import Link from 'next/link'
 
 const AboutSection = () => {
   return (
-    <section className="py-20 px-4 md:px-8">
+    <section className="py-10 md:py-20 px-4 md:px-8">
         <div className="container mx-auto px-4">
             <div className="flex flex-col items-center lg:flex-row gap-12">
             {/* Left: Image */}
@@ -32,7 +32,7 @@ const AboutSection = () => {
                 transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
             >
                 <motion.h2 
-                className="text-3xl md:text-4xl font-bold text-black mb-6"
+                className="text-2xl md:text-4xl font-bold text-black mb-6"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.4 }}
@@ -40,7 +40,7 @@ const AboutSection = () => {
                 Refining with Responsibility, Precision, and Trust
                 </motion.h2>
                 <motion.p 
-                className="text-[#1A1A1A] mb-3 leading-relaxed"
+                className="text-[#1A1A1A] text-sm md:text-base mb-3 leading-relaxed"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.6 }}
@@ -48,7 +48,7 @@ const AboutSection = () => {
                     In every age, gold has represented permanence in an impermanent world.
                 </motion.p>
                 <motion.p 
-                className="text-[#1A1A1A] mb-3 leading-relaxed"
+                className="text-[#1A1A1A] text-sm md:text-base mb-3 leading-relaxed"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.6 }}
@@ -56,7 +56,7 @@ const AboutSection = () => {
                     Promise Gold Refinery was founded upon a simple conviction: that refining precious metals is not merely an industrial process, but a custodial responsibility. Located in the United Arab Emirates - a historic gateway connecting East and West - the refinery serves as a modern sanctuary where raw material is transformed into instruments of purity, value, and global exchange.
                 </motion.p>
                 <motion.p 
-                className="text-[#1A1A1A] mb-8 leading-relaxed"
+                className="text-[#1A1A1A] text-sm md:text-base mb-8 leading-relaxed"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.6 }}
@@ -65,7 +65,7 @@ const AboutSection = () => {
                 </motion.p>
                 <Link href="/about-us" className="">
                     <motion.button 
-                    className="flex items-center justify-center gap-2 bg-[#EBDECF] hover:bg-[#D9C8B4] text-black py-3 px-8 rounded-full transition-colors duration-300 cursor-pointer"
+                    className="flex items-center justify-center gap-2 bg-[#EBDECF] hover:bg-[#D9C8B4] text-black text-sm md:text-base py-3 px-8 rounded-full transition-colors duration-300 cursor-pointer"
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
                     >
