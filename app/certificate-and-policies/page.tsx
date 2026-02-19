@@ -59,7 +59,7 @@ export default function CertificateAndPolicies() {
                 delay: 0.2,
                 ease: [0.16, 1, 0.3, 1],
               }}
-              className="text-gray-700 leading-relaxed mb-12 max-w-5xl mx-auto text-center md:text-left text-sm md:text-base"
+              className="text-gray-700 leading-relaxed mb-12 max-w-5xl mx-auto text-justify md:text-left text-sm md:text-base"
             >
                 Promise Gold Refinery demonstrates its commitment to ethical and responsible business practices through a comprehensive set of policies and certifications. Our adherence to industry standards is evidenced by our AML-Certification, ensuring compliance with anti-money laundering and counter-financing of terrorism regulations. We maintain rigorous due diligence and risk assessment protocols, as outlined in our Due Diligence and Risk Assessment policy. Our dedication to fair practices is further reinforced by our Grievance policy, which provides a clear mechanism for addressing concerns. The Antibribery Policy underscores our zero-tolerance approach to corruption, while our Responsible Sourcing Policy guarantees that we procure materials ethically and sustainably. These policies collectively reflect Promise Gold Refinery's unwavering commitment to integrity, transparency, and responsible gold refining practices.
             </motion.p>

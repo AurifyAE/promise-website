@@ -78,7 +78,7 @@ export default function ProductDetailPage() {
       <main className="pt-24 md:pt-32 pb-20">
         <div className="container mx-auto px-4 md:px-8 flex flex-col">
           {/* Top row: product variants + copy */}
-          <section className="relative mb-32 order-2 md:order-1">
+          <section className="relative mt-10 md:mt-0 md:mb-32 order-2 md:order-1">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
               {/* Variant row */}
               <motion.div
@@ -205,10 +205,10 @@ export default function ProductDetailPage() {
               </motion.div>
             </div>
 
-            <div className="relative h-[5vh] hidden md:flex items-start">
+            <div className="relative h-[5vh] hidden xl:flex items-start">
               <div
                 ref={containerRef}
-                className="absolute -top-20 right-93"
+                className="absolute -top-20 right-93 2xl:right-145"
               >
                       <svg
                   width="660"
