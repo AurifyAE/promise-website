@@ -92,12 +92,12 @@ export default function Navbar() {
             {/* Logo — mobile only, right next to hamburger */}
             <Link href="/" onClick={close} className="md:hidden">
               <Image
-                src="/images/home/promise-refinery-logo.svg"
+                src="/logo/promise-logo.svg"
                 alt="Promise Gold Refinery"
                 width={200}
                 height={36}
                 priority
-                className="h-24 w-auto"
+                className="h-10 w-auto"
               />
             </Link>
           </div>
@@ -106,12 +106,12 @@ export default function Navbar() {
           <div className="hidden md:absolute md:inset-x-0 md:flex md:justify-center md:pointer-events-none">
             <Link href="/" onClick={close} className="pointer-events-auto">
               <Image
-                src="/images/home/promise-refinery-logo.svg"
+                src="/logo/promise-logo.svg"
                 alt="Promise Gold Refinery"
                 width={200}
                 height={36}
                 priority
-                className="h-36 w-auto"
+                className="h-14 w-auto"
               />
             </Link>
           </div>

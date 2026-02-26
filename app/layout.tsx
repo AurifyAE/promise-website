@@ -20,8 +20,11 @@ const instrumentSans = Instrument_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "Promise Gold Refinery FZC",
+  title: "Promise Gold Refinery FZE",
   description: "",
+  icons: {
+    icon: "/logo/promise-favicon.svg",
+  },
 };
 
 export default function RootLayout({
@@ -31,6 +34,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <link rel="icon" href="/logo/promise-favicon.svg" />
+      </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} ${instrumentSans.variable} antialiased`}
       >
