@@ -27,6 +27,10 @@ const policies = [
     title: "View PGR MOE Refiners Compliance Report 2024",
     href: "/pdfs/policies/PGR-MOE-Refiners-Compliance-Report-2024.pdf",
   },
+  {
+    title: "MOE Reviewers Assurance report Promise Gold signed",
+    href: "/pdfs/policies/MOE-Reviewers-Assurance-report-Promise-Gold-signed.pdf"
+  }
 ];
 
 export default function CertificateAndPolicies() {
