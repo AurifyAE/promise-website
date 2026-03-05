@@ -288,7 +288,7 @@ export default function Navbar() {
           {/* Sidebar Header */}
           <div className="flex items-center justify-between p-8 border-b border-[#333]">
             <Image
-              src="/images/home/promise-refinery-logo.svg"
+              src="/logo/promise-logo.svg"
               alt="Logo"
               width={160}
               height={42}
