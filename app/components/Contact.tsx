@@ -87,25 +87,25 @@ export default function Contact() {
               </p>
             </motion.div>
 
-            <div className="space-y-6 text-sm md:text-base">
+            <div className="space-y-8 text-sm md:text-base mt-12">
               <motion.div
                 initial={{ opacity: 0, x: -20 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: 0.3, ease: [0.16, 1, 0.3, 1] }}
-                className="flex items-center space-x-4"
+                className="flex items-center space-x-6"
               >
                 <motion.div
                   initial={{ opacity: 0, scale: 0.5 }}
                   whileInView={{ opacity: 1, scale: 1 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.4, delay: 0.35, ease: [0.16, 1, 0.3, 1] }}
-                >
-                  <Image src="/icons/phone-call.svg" alt="phone" width={6} height={6} className="h-6 w-6 object-cover" priority />
+                  className="bg-white/10 p-3 rounded-full">
+                  <Image src="/icons/phone-call.svg" alt="phone" width={24} height={24} className="h-6 w-6 brightness-0 invert" priority />
                 </motion.div>
-                <div className="flex items-center space-x-4">
-                  <p className="text-[#FCF7F1]">+971 50 579 4931</p>
-                  <p className="text-[#FCF7F1]">+971 65 28 8027</p>
+                <div className="space-y-1 text-[#FCF7F1]">
+                  <p>+971 50 579 4931</p>
+                  <p>+971 65 28 8027</p>
                 </div>
               </motion.div>
 
@@ -114,19 +114,19 @@ export default function Contact() {
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: 0.4, ease: [0.16, 1, 0.3, 1] }}
-                className="flex items-start space-x-4"
+                className="flex items-start space-x-6"
               >
                 <motion.div
                   initial={{ opacity: 0, scale: 0.5 }}
                   whileInView={{ opacity: 1, scale: 1 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.4, delay: 0.45, ease: [0.16, 1, 0.3, 1] }}
-                  className="mt-1"
-                >
-                  <Image src="/icons/email.svg" alt="email" width={6} height={6} className="h-6 w-6 object-cover" priority />
+                  className="bg-white/10 p-3 rounded-full">
+                  <Image src="/icons/email.svg" alt="email" width={24} height={24} className="h-6 w-6 brightness-0 invert" priority />
                 </motion.div>
-                <div>
-                  <p className="text-[#FCF7F1]">compliance@promisegoldrefinery.com<br />promisegoldrefinery@gmail.com</p>
+                <div className="space-y-1 text-[#FCF7F1]">
+                  <p>compliance@promisegoldrefinery.com</p>
+                  <p>promisegoldrefinery@gmail.com</p>
                 </div>
               </motion.div>
 
@@ -135,20 +135,19 @@ export default function Contact() {
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: 0.5, ease: [0.16, 1, 0.3, 1] }}
-                className="flex items-start space-x-4"
+                className="flex items-start space-x-6"
               >
                 <motion.div
                   initial={{ opacity: 0, scale: 0.5 }}
                   whileInView={{ opacity: 1, scale: 1 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.4, delay: 0.55, ease: [0.16, 1, 0.3, 1] }}
-                  className="mt-1"
-                >
-                  <Image src="/icons/location-filled.svg" alt="location" width={6} height={6} className="h-6 w-6 object-cover" priority />
+                  className="bg-white/10 p-3 rounded-full">
+                  <Image src="/icons/location-filled.svg" alt="location" width={24} height={24} className="h-6 w-6 brightness-0 invert" priority />
                 </motion.div>
-                <div>
-                  <p className="text-[#FCF7F1]">Q3-49, SAIF Zone Airport Freezone,</p>
-                  <p className="text-[#FCF7F1]">Sharjah - UAE. P.O.Box: 124479</p>
+                <div className="space-y-1 text-[#FCF7F1]">
+                  <p>Q3-49, SAIF Zone Airport Freezone</p>
+                  <p>Sharjah - UAE. P.O.Box: 124479</p>
                 </div>
               </motion.div>
             </div>
@@ -159,12 +158,12 @@ export default function Contact() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.6, ease: [0.16, 1, 0.3, 1] }}
-              className="mt-8 flex space-x-4"
+              className="mt-12 flex space-x-4"
             >
               {[
-                { href: "#", icon: "/icons/youtube.svg", label: "YouTube", bg: "bg-black" },
-                { href: "instagram.com", icon: "/icons/instagram.svg", label: "Instagram", bg: "bg-white" },
-                { href: "https://api.whatsapp.com/send/?phone=971505794931&text&type=phone_number&app_absent=0", icon: "/icons/whatsapp.svg", label: "WhatsApp", bg: "bg-black" },
+                { href: "#", icon: "/icons/youtube.svg", label: "YouTube" },
+                { href: "instagram.com", icon: "/icons/instagram.svg", label: "Instagram" },
+                { href: "https://api.whatsapp.com/send/?phone=971505794931&text&type=phone_number&app_absent=0", icon: "/icons/whatsapp.svg", label: "WhatsApp" },
               ].map((social, index) => (
                 <motion.div
                   key={social.label}
@@ -176,15 +175,15 @@ export default function Contact() {
                   <Link
                     href={social.href}
                     target={social.label !== "YouTube" ? '_blank' : undefined}
-                    className={`${social.bg} h-8 w-8 text-white hover:text-[#EBDECF] transition-colors flex items-center justify-center rounded-full`}
+                    className="bg-white/20 h-10 w-10 text-white hover:bg-gold-600 transition-all flex items-center justify-center rounded-full backdrop-blur-md"
                   >
                     <span className="sr-only">{social.label}</span>
                     <Image
                       src={social.icon}
                       alt={social.label}
-                      width={social.label === "YouTube" ? 6 : 5}
-                      height={social.label === "YouTube" ? 6 : 5}
-                      className={`h-5 w-5 ${social.label === "YouTube" ? "object-contain" : "object-cover"}`}
+                      width={20}
+                      height={20}
+                      className="h-5 w-5 brightness-0 invert"
                       priority
                     />
                   </Link>
@@ -315,7 +314,7 @@ export default function Contact() {
                 <span className="block text-sm font-medium text-gray-700 mb-1">Subject *</span>
                 <div className="flex flex-wrap gap-x-6 gap-y-2 mt-2">
                   {[
-                    { value: "General Inquiry", label: "General Inquiry" },
+                    { value: "General Enquiry", label: "General Enquiry" },
                     { value: "Gold Refining", label: "Gold Refining" },
                     { value: "Assaying", label: "Assaying" },
                     { value: "Silver Refinery", label: "Silver Refinery" },
@@ -387,8 +386,8 @@ export default function Contact() {
                     ${status === 'success'
                       ? 'bg-[#294734] text-white'
                       : status === 'error'
-                      ? 'bg-red-600 text-white'
-                      : 'bg-[#1A1A1A] text-white hover:bg-opacity-90'
+                        ? 'bg-red-600 text-white'
+                        : 'bg-[#1A1A1A] text-white hover:bg-opacity-90'
                     }
                     ${status === 'loading' ? 'opacity-70 cursor-not-allowed' : ''}
                   `}

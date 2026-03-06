@@ -17,7 +17,7 @@ export async function POST(req: Request) {
       from: `"Promise Gold Refinery" <${process.env.GMAIL_USER}>`,
       to: process.env.RECEIVE_EMAIL,       // where you want to receive emails
       replyTo: email,                      // reply goes directly to the sender
-      subject: `New Inquiry [${subject}] from ${firstName} ${lastName}`,
+      subject: `New Enquiry [${subject}] from ${firstName} ${lastName}`,
       html: `
         <div style="font-family: sans-serif; max-width: 600px; margin: auto; padding: 24px; border: 1px solid #e5e5e5; border-radius: 8px;">
           <h2 style="color: #294734; margin-bottom: 4px;">New Contact Form Submission</h2>

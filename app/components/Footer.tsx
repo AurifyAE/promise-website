@@ -8,7 +8,8 @@ const quickLinks = [
   { label: "Policies & Certifications", href: "/certificate-and-policies" },
   { label: "Gallery", href: "/gallery" },
   { label: "Contact Us", href: "/contact-us" },
-  // { label: "News", href: "/news" },
+  { label: "Grievances", href: "/grievances" },
+  { label: "New Account", href: "/new-account" },
   // { label: "Blogs", href: "/blogs" },
   { label: "FAQ", href: "/faq" },
 ];
@@ -31,10 +32,10 @@ export default function Footer() {
           {/* 1st Column - Logo and Newsletter */}
           <div className="space-y-6 md:col-span-2">
             <div className="h-10 md:h-14 mb-4">
-              <Image 
-                src="/logo/promise-logo.svg" 
-                alt="Promise Gold Refinery" 
-                width={128} 
+              <Image
+                src="/logo/promise-logo.svg"
+                alt="Promise Gold Refinery"
+                width={128}
                 height={48}
                 className="h-full w-auto"
                 priority
@@ -57,7 +58,7 @@ export default function Footer() {
                   className="flex-1 border-b-2 border-gray-300 px-4 py-3 text-sm text-white placeholder-gray-300 focus:outline-none focus:bg-[#1f3627]"
                 />
                 <button className="px-4 py-3 bg-[#1f3627] border-b-2 border-gray-300 text-sm font-semibold text-white transition-colors hover:bg-[#1a2c20]">
-                  
+
                   <ArrowRight className="w-5 h-5 -rotate-45" />
                 </button>
               </div>
@@ -83,7 +84,7 @@ export default function Footer() {
 
           {/* 3rd Column - More Links */}
           <div>
-          <h3 className="mb-3 font-semibold">Services</h3>
+            <h3 className="mb-3 font-semibold">Services</h3>
             <ul className="space-y-2 text-sm mb-3">
               {services.map((item) => (
                 <li key={item.label}>
@@ -92,7 +93,7 @@ export default function Footer() {
                   </Link>
                 </li>
               ))}
-            </ul>          
+            </ul>
           </div>
         </div>
 
