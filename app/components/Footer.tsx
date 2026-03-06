@@ -33,7 +33,7 @@ export default function Footer() {
           <div className="space-y-6 md:col-span-2">
             <div className="h-10 md:h-14 mb-4">
               <Image
-                src="/logo/promise-logo.svg"
+                src="/logo/promise-refinery-logo.svg"
                 alt="Promise Gold Refinery"
                 width={128}
                 height={48}

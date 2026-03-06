@@ -44,7 +44,7 @@ export default function Navbar() {
     setIsOpen(false);
     setOpenSubmenu(null);
   };
-  
+
   const toggleSubmenu = (path: string) => {
     setOpenSubmenu(openSubmenu === path ? null : path);
   };
@@ -65,34 +65,31 @@ export default function Navbar() {
             >
               {/* Top line → becomes top arm of X */}
               <span
-                className={`block h-1 w-9 bg-[#A97C50]/60 rounded-full transition-all duration-300 origin-center ${
-                  isOpen
-                    ? 'rotate-45 translate-y-1'
-                    : 'rotate-0 translate-y-0'
-                }`}
+                className={`block h-1 w-9 bg-[#A97C50]/60 rounded-full transition-all duration-300 origin-center ${isOpen
+                  ? 'rotate-45 translate-y-1'
+                  : 'rotate-0 translate-y-0'
+                  }`}
               />
 
               {/* Middle line → fades out */}
               <span
-                className={`block h-1 w-9 bg-[#A97C50]/60 rounded-full transition-all duration-300 ${
-                  isOpen ? 'opacity-0 scale-0' : 'opacity-100 scale-100'
-                }`}
+                className={`block h-1 w-9 bg-[#A97C50]/60 rounded-full transition-all duration-300 ${isOpen ? 'opacity-0 scale-0' : 'opacity-100 scale-100'
+                  }`}
               />
 
               {/* Bottom line → becomes bottom arm of X */}
               <span
-                className={`block h-1 w-9 bg-[#A97C50]/60 rounded-full transition-all duration-300 origin-center ${
-                  isOpen
-                    ? '-rotate-45 -translate-y-3'
-                    : 'rotate-0 translate-y-0'
-                }`}
+                className={`block h-1 w-9 bg-[#A97C50]/60 rounded-full transition-all duration-300 origin-center ${isOpen
+                  ? '-rotate-45 -translate-y-3'
+                  : 'rotate-0 translate-y-0'
+                  }`}
               />
             </button>
 
             {/* Logo — mobile only, right next to hamburger */}
             <Link href="/" onClick={close} className="md:hidden">
               <Image
-                src="/logo/promise-logo.svg"
+                src="/logo/promise-refinery-logo.svg"
                 alt="Promise Gold Refinery"
                 width={200}
                 height={36}
@@ -106,7 +103,7 @@ export default function Navbar() {
           <div className="hidden md:absolute md:inset-x-0 md:flex md:justify-center md:pointer-events-none">
             <Link href="/" onClick={close} className="pointer-events-auto">
               <Image
-                src="/logo/promise-logo.svg"
+                src="/logo/promise-refinery-logo.svg"
                 alt="Promise Gold Refinery"
                 width={200}
                 height={36}
@@ -115,7 +112,7 @@ export default function Navbar() {
               />
             </Link>
           </div>
-          
+
           {/* Contact Us Dropdown with delayed open/close on hover/focus */}
           <div className="relative w-28 md:w-32 h-10 flex items-center justify-end"
             onMouseEnter={() => {
@@ -150,7 +147,7 @@ export default function Navbar() {
               }}
             >
               Contact Us
-              <svg className="w-4 h-4 ml-1" fill="none" viewBox="0 0 20 20"><path d="M6 8l4 4 4-4" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/></svg>
+              <svg className="w-4 h-4 ml-1" fill="none" viewBox="0 0 20 20"><path d="M6 8l4 4 4-4" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" /></svg>
             </button>
             <div
               className={`
@@ -168,93 +165,93 @@ export default function Navbar() {
                 setDropdownOpen(false);
               }}
             >
-                    <ul className="py-2">
-                      {/* WhatsApp Option */}
-                      <li>
-                        <a
-                          href="https://wa.me/971505794931"
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="flex items-center gap-3 px-4 py-2 hover:bg-zinc-100 transition text-[#294734]"
+              <ul className="py-2">
+                {/* WhatsApp Option */}
+                <li>
+                  <a
+                    href="https://wa.me/971505794931"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-3 px-4 py-2 hover:bg-zinc-100 transition text-[#294734]"
+                  >
+                    <Image
+                      src="/icons/whatsapp-yellow.svg"
+                      alt="WhatsApp"
+                      width={20}
+                      height={20}
+                      className="w-5 h-5"
+                    />
+                    WhatsApp
+                  </a>
+                </li>
+                {/* Email Option */}
+                <li>
+                  <a
+                    href="mailto:compliance@promisegoldrefinery.com"
+                    className="flex items-center gap-3 px-4 py-2 hover:bg-zinc-100 transition text-[#294734]"
+                  >
+                    <Image
+                      src="/icons/email-yellow.svg"
+                      alt="Email"
+                      width={20}
+                      height={20}
+                      className="w-5 h-5"
+                    />
+                    Email
+                  </a>
+                </li>
+                {/* Call Option */}
+                <li>
+                  <button
+                    type="button"
+                    onClick={async (e) => {
+                      e.preventDefault();
+                      // On mobile, use tel: link
+                      if (window.innerWidth < 1024) {
+                        window.location.href = 'tel:+971505794931';
+                        return;
+                      }
+                      // On desktop, copy to clipboard
+                      try {
+                        await navigator.clipboard.writeText('+971 50 579 4931');
+                        setPhoneCopied(true);
+                        setTimeout(() => {
+                          setPhoneCopied(false);
+                        }, 2000);
+                      } catch (err) {
+                        // Fallback: open tel link if clipboard fails
+                        window.location.href = 'tel:+971505794931';
+                      }
+                    }}
+                    className="flex items-center gap-3 px-4 py-2 hover:bg-zinc-100 transition text-[#294734] group w-full text-left relative"
+                  >
+                    <Image
+                      src="/icons/phone-yellow.svg"
+                      alt="Call"
+                      width={20}
+                      height={20}
+                      className="w-5 h-5"
+                    />
+                    <span className="relative">
+                      Call
+                      <span className="hidden lg:inline-block absolute left-full top-1/2 -translate-y-1/2 ml-2 px-2 py-1 rounded bg-zinc-100 text-[#294734] text-xs shadow transition-opacity duration-200 opacity-0 group-hover:opacity-100 group-hover:visible whitespace-nowrap">
+                        +971 50 579 4931
+                      </span>
+                      {/* Copied message - only visible on desktop */}
+                      {phoneCopied && (
+                        <motion.span
+                          initial={{ opacity: 0, scale: 0.8 }}
+                          animate={{ opacity: 1, scale: 1 }}
+                          exit={{ opacity: 0, scale: 0.8 }}
+                          className="hidden lg:inline-block absolute left-full top-12 px-2 py-1 rounded bg-emerald-100 text-emerald-800 text-xs shadow whitespace-nowrap z-50"
                         >
-                          <Image
-                            src="/icons/whatsapp-yellow.svg"
-                            alt="WhatsApp"
-                            width={20}
-                            height={20}
-                            className="w-5 h-5"
-                          />
-                          WhatsApp
-                        </a>
-                      </li>
-                      {/* Email Option */}
-                      <li>
-                        <a
-                          href="mailto:compliance@promisegoldrefinery.com"
-                          className="flex items-center gap-3 px-4 py-2 hover:bg-zinc-100 transition text-[#294734]"
-                        >
-                          <Image
-                            src="/icons/email-yellow.svg"
-                            alt="Email"
-                            width={20}
-                            height={20}
-                            className="w-5 h-5"
-                          />
-                          Email
-                        </a>
-                      </li>
-                      {/* Call Option */}
-                      <li>
-                        <button
-                          type="button"
-                          onClick={async (e) => {
-                            e.preventDefault();
-                            // On mobile, use tel: link
-                            if (window.innerWidth < 1024) {
-                              window.location.href = 'tel:+971505794931';
-                              return;
-                            }
-                            // On desktop, copy to clipboard
-                            try {
-                              await navigator.clipboard.writeText('+971 50 579 4931');
-                              setPhoneCopied(true);
-                              setTimeout(() => {
-                                setPhoneCopied(false);
-                              }, 2000);
-                            } catch (err) {
-                              // Fallback: open tel link if clipboard fails
-                              window.location.href = 'tel:+971505794931';
-                            }
-                          }}
-                          className="flex items-center gap-3 px-4 py-2 hover:bg-zinc-100 transition text-[#294734] group w-full text-left relative"
-                        >
-                          <Image
-                            src="/icons/phone-yellow.svg"
-                            alt="Call"
-                            width={20}
-                            height={20}
-                            className="w-5 h-5"
-                          />
-                          <span className="relative">
-                            Call
-                            <span className="hidden lg:inline-block absolute left-full top-1/2 -translate-y-1/2 ml-2 px-2 py-1 rounded bg-zinc-100 text-[#294734] text-xs shadow transition-opacity duration-200 opacity-0 group-hover:opacity-100 group-hover:visible whitespace-nowrap">
-                              +971 50 579 4931
-                            </span>
-                            {/* Copied message - only visible on desktop */}
-                            {phoneCopied && (
-                              <motion.span
-                                initial={{ opacity: 0, scale: 0.8 }}
-                                animate={{ opacity: 1, scale: 1 }}
-                                exit={{ opacity: 0, scale: 0.8 }}
-                                className="hidden lg:inline-block absolute left-full top-12 px-2 py-1 rounded bg-emerald-100 text-emerald-800 text-xs shadow whitespace-nowrap z-50"
-                              >
-                                Copied!
-                              </motion.span>
-                            )}
-                          </span>
-                        </button>
-                      </li>
-                    </ul>
+                          Copied!
+                        </motion.span>
+                      )}
+                    </span>
+                  </button>
+                </li>
+              </ul>
             </div>
           </div>
         </div>
@@ -288,7 +285,7 @@ export default function Navbar() {
           {/* Sidebar Header */}
           <div className="flex items-center justify-between p-8 border-b border-[#333]">
             <Image
-              src="/logo/promise-logo.svg"
+              src="/logo/promise-refinery-logo.svg"
               alt="Logo"
               width={160}
               height={42}
@@ -341,17 +338,15 @@ export default function Navbar() {
                       <div>
                         <button
                           onClick={() => toggleSubmenu(item.path)}
-                          className={`w-full flex items-center justify-between rounded-xl px-4 py-2 font-medium transition-all duration-200 ${
-                            active
-                              ? "bg-[#A97C50]/15 text-[#A97C50] border border-[#A97C50]/40 shadow-inner"
-                              : "text-gray-300 hover:bg-[#294734] hover:text-[#A97C50]"
-                          }`}
+                          className={`w-full flex items-center justify-between rounded-xl px-4 py-2 font-medium transition-all duration-200 ${active
+                            ? "bg-[#A97C50]/15 text-[#A97C50] border border-[#A97C50]/40 shadow-inner"
+                            : "text-gray-300 hover:bg-[#294734] hover:text-[#A97C50]"
+                            }`}
                         >
                           <span>{item.label}</span>
                           <span
-                            className={`transition-transform duration-200 ${
-                              isSubmenuOpen ? "-rotate-90" : "rotate-90"
-                            }`}
+                            className={`transition-transform duration-200 ${isSubmenuOpen ? "-rotate-90" : "rotate-90"
+                              }`}
                           >
                             <svg
                               className="w-3 h-3 text-current"
@@ -388,11 +383,10 @@ export default function Navbar() {
                                   <Link
                                     href={subItem.path}
                                     onClick={close}
-                                    className={`block rounded-lg px-4 py-2 text-sm font-medium transition-all duration-200 ${
-                                      subActive
-                                        ? "bg-[#A97C50]/20 text-[#A97C50] border border-[#A97C50]/30"
-                                        : "text-gray-400 hover:bg-[#294734] hover:text-[#A97C50]"
-                                    }`}
+                                    className={`block rounded-lg px-4 py-2 text-sm font-medium transition-all duration-200 ${subActive
+                                      ? "bg-[#A97C50]/20 text-[#A97C50] border border-[#A97C50]/30"
+                                      : "text-gray-400 hover:bg-[#294734] hover:text-[#A97C50]"
+                                      }`}
                                   >
                                     {subItem.label}
                                   </Link>
@@ -406,11 +400,10 @@ export default function Navbar() {
                       <Link
                         href={item.path}
                         onClick={close}
-                        className={`block rounded-xl px-4 py-2 font-medium transition-all duration-200 ${
-                          active
-                            ? "bg-[#A97C50]/15 text-[#A97C50] border border-[#A97C50]/40 shadow-inner"
-                            : "text-gray-300 hover:bg-[#294734] hover:text-[#A97C50]"
-                        }`}
+                        className={`block rounded-xl px-4 py-2 font-medium transition-all duration-200 ${active
+                          ? "bg-[#A97C50]/15 text-[#A97C50] border border-[#A97C50]/40 shadow-inner"
+                          : "text-gray-300 hover:bg-[#294734] hover:text-[#A97C50]"
+                          }`}
                       >
                         {item.label}
                       </Link>

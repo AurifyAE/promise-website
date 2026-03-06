@@ -88,7 +88,7 @@ export default function NewAccountPage() {
                                     key={index}
                                     className="flex items-center gap-4 px-4 py-3 rounded-lg border border-gray-50 bg-white hover:border-gold-100 hover:bg-gold-50/20 transition-all"
                                 >
-                                    <span className="flex-shrink-0 w-6 h-6 rounded-md bg-gold-50 text-gold-700 font-bold text-xs flex items-center justify-center">
+                                    <span className="shrink-0 w-6 h-6 rounded-md bg-gold-50 text-gold-700 font-bold text-xs flex items-center justify-center">
                                         {index + 1}
                                     </span>
                                     <span className="text-gray-700 text-sm">{doc}</span>

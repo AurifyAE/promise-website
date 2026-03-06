@@ -156,7 +156,7 @@ export default function FAQPage() {
                       {item.question}
                     </span>
                     <div className={`
-                                            flex-shrink-0 ml-4 p-2 rounded-full transition-all duration-300
+                                            shrink-0 ml-4 p-2 rounded-full transition-all duration-300
                                             ${isOpen ? 'bg-gold-500 text-white rotate-180' : 'bg-gray-100 text-gray-500 group-hover:bg-gray-200'}
                                         `}>
                       <ChevronDown size={20} />
