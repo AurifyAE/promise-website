@@ -9,7 +9,7 @@ const quickLinks = [
   { label: "Gallery", href: "/gallery" },
   { label: "Contact Us", href: "/contact-us" },
   { label: "Grievances", href: "/grievances" },
-  { label: "New Account", href: "/new-account" },
+  { label: "Account Opening", href: "/new-account" },
   // { label: "Blogs", href: "/blogs" },
   { label: "FAQ", href: "/faq" },
 ];
