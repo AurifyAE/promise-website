@@ -20,7 +20,6 @@ const services = [
   { label: "Advanced Gold and Silver Refining", href: "/services" },
   { label: "Investment Bar Casting", href: "/services" },
   { label: "Precious Metal Recycling and Recovery", href: "/services" },
-
 ];
 
 
