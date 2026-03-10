@@ -147,7 +147,7 @@ export default function CertificateAndPolicies() {
               }}
               className="text-gray-700 leading-relaxed mb-12 max-w-5xl mx-auto text-justify md:text-left text-sm md:text-base"
             >
-              At Tigris Gold, we take due cognizance of compliance and revise our policies regularly. Subsequently, we do conduct periodical audits to access the impact being made in process and system to ensure fair business practice.
+              At Promise Gold Refinery, compliance is a core part of our operations. We regularly review and strengthen our policies while conducting periodic audits to evaluate our processes and systems, ensuring responsible and ethical business practices.
             </motion.p>
           </div>
 
