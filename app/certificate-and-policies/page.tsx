@@ -166,7 +166,7 @@ export default function CertificateAndPolicies() {
                 className="group flex flex-col items-center gap-4"
               >
                 {/* Card */}
-                <div className="relative w-full flex flex-col items-center gap-3 rounded-2xl border border-[#C9A84C]/20 bg-gradient-to-b from-[#C9A84C]/5 to-transparent px-3 pt-6 pb-4 hover:border-[#C9A84C]/60 hover:from-[#C9A84C]/10 transition-all duration-300 hover:shadow-[0_0_24px_rgba(201,168,76,0.12)]">
+                <div className="relative w-full flex flex-col items-center gap-3 rounded-2xl border border-[#C9A84C]/20 bg-linear-to-b from-[#C9A84C]/5 to-transparent px-3 pt-6 pb-4 hover:border-[#C9A84C]/60 hover:from-[#C9A84C]/10 transition-all duration-300 hover:shadow-[0_0_24px_rgba(201,168,76,0.12)]">
 
                   {/* ISO Icon with glow */}
                   <div className="relative">

@@ -103,10 +103,10 @@ export default function Footer() {
               © 2025 Promise Gold Refinery. All rights reserved
             </p>
             <div className="mt-4 flex space-x-6 text-sm text-gray-400 md:mt-0">
-              <Link href="/privacy-policy" className="hover:text-[#EBDECF] transition-colors">
+              <Link href="/" className="hover:text-[#EBDECF] transition-colors">
                 Privacy Policy
               </Link>
-              <Link href="/terms" className="hover:text-[#EBDECF] transition-colors">
+              <Link href="/" className="hover:text-[#EBDECF] transition-colors">
                 Terms & Conditions
               </Link>
             </div>

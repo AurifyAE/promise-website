@@ -83,7 +83,7 @@ export default function Grievances() {
                             </p>
                         </div>
                         <Link
-                            href="/docs/grievances-form.pdf"
+                            href="/pdfs/grievances/PGR-Grievance-and-Whistleblowing-Policy-2025.pdf"
                             target="_blank"
                             className="flex items-center gap-3 bg-[#e09b4d] hover:bg-[#c77b30] text-white px-8 py-4 rounded-full font-semibold transition-all shadow-lg shadow-gold-600/20 whitespace-nowrap"
                         >
