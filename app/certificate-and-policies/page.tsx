@@ -8,51 +8,59 @@ import Link from "next/link";
 
 const policies = [
   {
-    title: "View Supplier Chain Risk Policy 2024",
-    href: "/pdfs/policies/Supplier-Chain-Risk-Policy-2024.pdf",
+    title: "ABC Policy 2025",
+    href: "/pdfs/policies/ABC Policy-2025.pdf#toolbar=0&navpanes=0",
   },
   {
-    title: "View Risk Based Assessment Policy 2024",
-    href: "/pdfs/policies/Risk-Based-Assessment-Policy-2024.pdf",
+    title: "AML CFT Policy 2025",
+    href: "/pdfs/policies/AML-CFT-Policy-2025.pdf#toolbar=0&navpanes=0",
   },
   {
-    title: "View PGR-AML CFT Policy 2024",
-    href: "/pdfs/policies/PGR-AML-CFT-Policy-2024.pdf",
+    title: "EHS Policy 2025",
+    href: "/pdfs/policies/EHS Policy-2025.pdf#toolbar=0&navpanes=0",
   },
   {
-    title: "View Independent Reasonable Assurance Report 2024",
-    href: "/pdfs/policies/IndependentReasonableAssuranceReport-PromiseGold2025FINAL.pdf",
+    title: "ESG Policy 2025",
+    href: "/pdfs/policies/ESG POLICY 2025.pdf#toolbar=0&navpanes=0",
   },
   {
-    title: "View PGR MOE Refiners Compliance Report 2024",
-    href: "/pdfs/policies/PGR-MOE-Refiners-Compliance-Report-2024.pdf",
+    title: "EWRA Policy 2025",
+    href: "/pdfs/policies/EWRA POLICY 2025.pdf#toolbar=0&navpanes=0",
   },
   {
-    title: "MOE Reviewers Assurance report Promise Gold signed",
-    href: "/pdfs/policies/MOE-Reviewers-Assurance-report-Promise-Gold-signed.pdf"
-  }
+    title: "Grievance and Whistleblowing Policy 2025",
+    href: "/pdfs/grievances/PGR-Grievance-and-Whistleblowing-Policy-2025.pdf#toolbar=0&navpanes=0",
+  },
+  {
+    title: "Human Rights & Labour Policy 2025",
+    href: "/pdfs/policies/Human Rights-Bonded Labour and Labour Policy 2025.pdf#toolbar=0&navpanes=0",
+  },
+  {
+    title: "Supply Chain Policy 2025",
+    href: "/pdfs/policies/Supply Chain Policy 2025.pdf#toolbar=0&navpanes=0",
+  },
 ];
 
 const accreditations = [
   {
     title: "ISO 14001:2015",
-    href: "/pdfs/accreditations/UAF0903141818_PROMISE GOLD REFINERY FZE_14001.pdf",
+    href: "/pdfs/accreditations/UAF0903141818_PROMISE GOLD REFINERY FZE_14001.pdf#toolbar=0&navpanes=0",
   },
   {
     title: "ISO 45001:2018",
-    href: "/pdfs/accreditations/UAF0903451819_PROMISE GOLD REFINERY FZE_45001.pdf",
+    href: "/pdfs/accreditations/UAF0903451819_PROMISE GOLD REFINERY FZE_45001.pdf#toolbar=0&navpanes=0",
   },
   {
     title: "ISO 9001:2015",
-    href: "/pdfs/accreditations/UAF090391817_PROMISE GOLD REFINERY FZE_9001.pdf",
+    href: "/pdfs/accreditations/UAF090391817_PROMISE GOLD REFINERY FZE_9001.pdf#toolbar=0&navpanes=0",
   },
   {
     title: "ISO 37101:2016",
-    href: "/pdfs/accreditations/UMS0903U2160_PROMISE GOLD REFINERY FZE_37101.pdf",
+    href: "/pdfs/accreditations/UMS0903U2160_PROMISE GOLD REFINERY FZE_37101.pdf#toolbar=0&navpanes=0",
   },
   {
     title: "ISO 28000:2022",
-    href: "/pdfs/accreditations/UMS0903U2161_PROMISE GOLD REFINERY FZE_28000.pdf",
+    href: "/pdfs/accreditations/UMS0903U2161_PROMISE GOLD REFINERY FZE_28000.pdf#toolbar=0&navpanes=0",
   }
 ];
 
@@ -192,7 +200,7 @@ export default function CertificateAndPolicies() {
                       before:absolute before:inset-0 before:bg-[#C9A84C] before:translate-y-full before:transition-transform before:duration-300
                       hover:before:translate-y-0 hover:text-white"
                   >
-                    <span className="relative z-10">View Download</span>
+                    <span className="relative z-10">View</span>
                   </Link>
                 </div>
               </motion.div>
