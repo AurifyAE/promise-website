@@ -59,7 +59,7 @@ export default function PdfModal({ src, title, onClose }: PdfModalProps) {
 
                     const ctx = canvas.getContext("2d")!;
 
-                    await page.render({ canvasContext: ctx, viewport, canvas }).promise;
+                    await page.render({ canvasContext: ctx, viewport }).promise;
                     if (cancelled) return;
 
                     rendered.push(canvas);
