@@ -59,7 +59,7 @@ export default function PdfModal({ src, title, onClose }: PdfModalProps) {
 
                     const ctx = canvas.getContext("2d")!;
 
-                    await page.render({ canvasContext: ctx, viewport }).promise;
+                    await page.render({ canvasContext: ctx, viewport, canvas }).promise;
                     if (cancelled) return;
 
                     rendered.push(canvas);
@@ -126,6 +126,18 @@ export default function PdfModal({ src, title, onClose }: PdfModalProps) {
     const handleContextMenu = (e: React.MouseEvent) => {
         e.preventDefault();
     };
+
+    // Prevent save and print shortcuts
+    useEffect(() => {
+        const handleKeyDown = (e: KeyboardEvent) => {
+            if ((e.ctrlKey || e.metaKey) && (e.key === 'p' || e.key === 's' || e.key === 'P' || e.key === 'S')) {
+                e.preventDefault();
+            }
+        };
+
+        window.addEventListener('keydown', handleKeyDown);
+        return () => window.removeEventListener('keydown', handleKeyDown);
+    }, []);
 
     return (
         <AnimatePresence>

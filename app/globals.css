@@ -40,6 +40,12 @@ p {
     "Instrument Sans", Arial, Helvetica, sans-serif;
 }
 
+@media print {
+  body {
+    display: none !important;
+  }
+}
+
 .scrollbar-hide {
   -ms-overflow-style: none;
   scrollbar-width: none;
