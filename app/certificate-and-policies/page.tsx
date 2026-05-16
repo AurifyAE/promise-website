@@ -39,6 +39,14 @@ const policies = [
     title: "Supply Chain Policy 2025",
     href: "/pdfs/policies/Supply Chain Policy 2025.pdf",
   },
+  {
+    title: "MOE Assurance Report 2023",
+    href: "/pdfs/policies/MOE-MD-68 Assurance Report 2023.pdf",
+  },
+  {
+    title: "MOE Assurance Report 2024",
+    href: "/pdfs/policies/MOE-MD-68 Assurance Report 2024.pdf",
+  }
 ];
 
 const accreditations = [
