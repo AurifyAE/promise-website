@@ -31,8 +31,11 @@ export default function PdfModal({ src, title, onClose }: PdfModalProps) {
                 // Dynamically import pdfjs-dist to avoid SSR issues
                 const pdfjsLib = await import("pdfjs-dist");
 
-                // Use the worker from CDN to avoid Next.js production build issues with worker paths
-                pdfjsLib.GlobalWorkerOptions.workerSrc = `https://unpkg.com/pdfjs-dist@${pdfjsLib.version}/build/pdf.worker.min.mjs`;
+                // Use the worker bundled with pdfjs-dist — no CDN version mismatch
+                pdfjsLib.GlobalWorkerOptions.workerSrc = new URL(
+                    "pdfjs-dist/build/pdf.worker.mjs",
+                    import.meta.url
+                ).toString();
 
                 const pdf = await pdfjsLib.getDocument(src).promise;
                 if (cancelled) return;
