@@ -46,6 +46,10 @@ const policies = [
   {
     title: "MOE Assurance Report 2024",
     href: "/pdfs/policies/MOE-MD-68 Assurance Report 2024.pdf",
+  },
+  {
+    title: "Assurance Statement & Refiner's Compliance Report",
+    href: "/pdfs/policies/Assurance Statement + Refiner's Compliance Report - PGR FZE 2025.pdf",
   }
 ];
 
