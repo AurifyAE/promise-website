@@ -49,7 +49,7 @@ const policies = [
   },
   {
     title: "MOE Assurance Report 2025",
-    href: "/pdfs/policies/a.pdf",
+    href: "/pdfs/policies/Assurance_Statement_and_Refiner's_Compliance_Report_PGR_FZE_2025.pdf",
   }
 ];
 
